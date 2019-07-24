@@ -11,7 +11,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use FOS\RestBundle\Controller\FOSRestController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
-
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 /**
  * @Route("/api",name="_api")
  */
@@ -20,6 +20,7 @@ class SecurityController extends FOSRestController
     //aller dans config -> packages -> packages  -> Security.yaml
     /**
      * @Route("/inscription", name="inscription", methods={"POST"})
+     * @Security("has_role('ROLE_Super-admin','ROLE_admin-Principal','ROLE_admin')")
      */
     public function inscriptionUtilisateur(Request $request,ObjectManager $manager,UserPasswordEncoderInterface $encoder)
     {//inscription
@@ -49,7 +50,7 @@ class SecurityController extends FOSRestController
                 $user->setRoles(['ROLE_admin']); 
             }
             elseif($libelle=='utilisateur'){
-                $user->setRoles(['ROLE_utilisateur']); 
+                $user->setRoles(['ROLE_utilisateur']);
             }
             $user->setStatus('Actif');
             $manager->persist($user);
