@@ -6,6 +6,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert; //pour la validation des données
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UtilisateurRepository")
@@ -34,6 +35,11 @@ class Utilisateur implements UserInterface
      * @ORM\Column(type="string")
      */
     private $password;
+
+    /**
+    *@Assert\EqualTo(propertyPath="password",message="Les mots de passes ne correspondent pas !")
+    */
+    private $confirmPassword; //créé le getter et setter!
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Entreprise", inversedBy="utilisateurs")
@@ -140,6 +146,18 @@ class Utilisateur implements UserInterface
     public function setPassword(string $password): self
     {
         $this->password = $password;
+
+        return $this;
+    }
+    
+    public function getConfirmPassword(): string
+    {
+        return (string) $this->confirmPassword;
+    }
+
+    public function setConfirmPassword(string $confirmPassword): self
+    {
+        $this->confirmPassword = $confirmPassword;
 
         return $this;
     }

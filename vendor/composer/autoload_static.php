@@ -138,6 +138,7 @@ class ComposerStaticInit65c7056d551aa315e0d2e7b23ff3862c
         'F' => 
         array (
             'Fig\\Link\\' => 9,
+            'Faker\\' => 6,
             'FOS\\RestBundle\\' => 15,
         ),
         'D' => 
@@ -512,6 +513,10 @@ class ComposerStaticInit65c7056d551aa315e0d2e7b23ff3862c
         'Fig\\Link\\' => 
         array (
             0 => __DIR__ . '/..' . '/fig/link-util/src',
+        ),
+        'Faker\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker',
         ),
         'FOS\\RestBundle\\' => 
         array (

@@ -92,6 +92,7 @@ return array(
     'Hoa\\Consistency\\' => array($vendorDir . '/hoa/consistency'),
     'Hoa\\Compiler\\' => array($vendorDir . '/hoa/compiler'),
     'Fig\\Link\\' => array($vendorDir . '/fig/link-util/src'),
+    'Faker\\' => array($vendorDir . '/fzaninotto/faker/src/Faker'),
     'FOS\\RestBundle\\' => array($vendorDir . '/friendsofsymfony/rest-bundle'),
     'Doctrine\\ORM\\' => array($vendorDir . '/doctrine/orm/lib/Doctrine/ORM'),
     'Doctrine\\Migrations\\' => array($vendorDir . '/doctrine/migrations/lib/Doctrine/Migrations'),
