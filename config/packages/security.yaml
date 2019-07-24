@@ -14,8 +14,26 @@ security:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
-        main:
+        login:
+            pattern:  ^/api/connexion
+            stateless: true
             anonymous: true
+            provider: app_user_provider  # pour voir le site on doit se connecter et notre provider de reference pour ce connecté est in_database
+
+            json_login:
+                check_path: /api/connexion
+                success_handler: lexik_jwt_authentication.handler.authentication_success
+                failure_handler: lexik_jwt_authentication.handler.authentication_failure
+
+            logout:
+                path: security_logout
+                target: api_login
+        api:
+            pattern:   ^/api/ok
+            stateless: true
+            guard:
+                authenticators:
+                    - lexik_jwt_authentication.jwt_token_authenticator
 
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#firewalls-authentication

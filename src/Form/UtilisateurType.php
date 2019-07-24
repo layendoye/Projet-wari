@@ -2,10 +2,13 @@
 
 namespace App\Form;
 
+use App\Entity\Profil;
 use App\Entity\Utilisateur;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use App\Entity\Entreprise;
 
 class UtilisateurType extends AbstractType
 {
@@ -13,13 +16,13 @@ class UtilisateurType extends AbstractType
     {
         $builder
             ->add('username')
-            ->add('roles')
             ->add('password')
             ->add('Nom')
             ->add('Email')
             ->add('Telephone')
             ->add('Nci')
-            ->add('Entreprise')
+            ->add('Entreprise',EntityType::class,['class'=> Entreprise::class,'choice_label'=>'RaisonSociale'])
+            ->add('Profil',EntityType::class,['class'=> Profil::class,'choice_label'=>'Libelle'])
         ;
     }
 

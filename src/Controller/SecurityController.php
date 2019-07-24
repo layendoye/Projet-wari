@@ -21,7 +21,7 @@ class SecurityController extends FOSRestController
     /**
      * @Route("/inscription", name="inscription", methods={"POST"})
      */
-    public function registration(Request $request,ObjectManager $manager,UserPasswordEncoderInterface $encoder)
+    public function inscriptionUtilisateur(Request $request,ObjectManager $manager,UserPasswordEncoderInterface $encoder)
     {//inscription
         $user=new Utilisateur();
         
@@ -29,10 +29,29 @@ class SecurityController extends FOSRestController
         
         $data=json_decode($request->getContent(),true);//Récupère une chaîne encodée JSON et la convertit en une variable PHP
         $form->submit($data);
+        
         if($form->isSubmitted() && $form->isValid()){
             $hash=$encoder->encodePassword($user, $user->getPassword());
             $user->setPassword($hash);
-            $user->setRoles(['ROLE_ADMIN','ROLE_USER']);
+            $profil=$user->getProfil();
+            
+            $libelle=$profil->getLibelle();
+            if($libelle=='Super-admin'){
+              $user->setRoles(['ROLE_Super-admin']);  
+            }
+            elseif($libelle=='Caissier'){
+                $user->setRoles(['ROLE_Caissier']); 
+            }
+            elseif($libelle=='admin-Principal'){
+                $user->setRoles(['ROLE_admin-Principal']); 
+            }
+            elseif($libelle=='admin'){
+                $user->setRoles(['ROLE_admin']); 
+            }
+            elseif($libelle=='utilisateur'){
+                $user->setRoles(['ROLE_utilisateur']); 
+            }
+            $user->setStatus('Actif');
             $manager->persist($user);
             $manager->flush();
         return $this->handleView($this->view(['status'=>'ok'],Response::HTTP_CREATED));
