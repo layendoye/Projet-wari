@@ -12,7 +12,7 @@ class AppFixtures extends Fixture
 {
     public function load(ObjectManager $manager)
     {
-        $motDePass='$2y$13$dlapp.pSXVdeSAgUtIyaYuFMmCggIa6sKFpISvXDhee...';
+        $motDePass='$2y$13$ABDZmhTxOlcf4HHbTC3BJeNFZuL/ad/uMTdZgCJZLYYQcSQP0LTKG';
         $profilSup=new Profil();
         $profilSup->setLibelle('Super-admin');
         $manager->persist($profilSup);
@@ -45,7 +45,7 @@ class AppFixtures extends Fixture
         $SupUser->setUsername('Abdou')
              ->setRoles(['ROLE_Super-admin'])
              ->setPassword($motDePass)
-             ->setConfirmPassword('$2y$13$dlapp.pSXVdeSAgUtIyaYuFMmCggIa6sKFpISvXDhee...')
+             ->setConfirmPassword($motDePass)
              ->setEntreprise($wari)
              ->setNom('Abdoulaye Ndoye')
              ->setEmail('layendoyesn@gmail.com')

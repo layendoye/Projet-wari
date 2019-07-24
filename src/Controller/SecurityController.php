@@ -62,20 +62,8 @@ class SecurityController extends FOSRestController
 
     /**
      *@Route("/connexion", name="api_login", methods={"POST"})
-     *@return JsonResponse
      */
-    public function login(): JsonResponse
-    { //gerer dans config packages security.yaml
-        $user = $this->getUser();
-        return $this->json([
-            'username' => $user->getUsername(),
-            'roles' => $user->getRoles()
-        ]);
-    }
-     /**
-     *@Route("/deconnexion", name="security_logout")
-     */
-    public function logout(){}
+    public function login(){ /*gerer dans config packages security.yaml*/}
 }
     /*
         1 - Aller dans config -> packages -> fos_rest.yaml
