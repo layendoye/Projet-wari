@@ -13,3 +13,5 @@ composer require orm
 composer require maker
 php bin/console make:subscriber
 php bin/console make:crud
+composer require orm-fixtures --dev 
+composer req --dev fzaninotto/faker

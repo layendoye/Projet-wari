@@ -64,6 +64,11 @@ class Entreprise
      */
     private $depots;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $Status;
+
     public function __construct()
     {
         $this->utilisateurs = new ArrayCollection();
@@ -193,6 +198,18 @@ class Entreprise
                 $depot->setEntreprise(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getStatus(): ?string
+    {
+        return $this->Status;
+    }
+
+    public function setStatus(string $Status): self
+    {
+        $this->Status = $Status;
 
         return $this;
     }
