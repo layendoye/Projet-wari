@@ -6,3 +6,10 @@ composer require symfony/web-server-bundle --dev
 composer require form annotations
 composer require --dev symfony/browser-kit symfony/css-selector
 composer require lexik/jwt-authentication-bundle
+
+
+composer require profiler
+composer require orm
+composer require maker
+php bin/console make:subscriber
+php bin/console make:crud

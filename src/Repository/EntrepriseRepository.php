@@ -4,6 +4,7 @@ namespace App\Repository;
 
 use App\Entity\Entreprise;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\ORM\Tools\Pagination\Paginator;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
 /**
@@ -47,4 +48,12 @@ class EntrepriseRepository extends ServiceEntityRepository
         ;
     }
     */
+    public function findAllEntreprises($page, $limit)
+    {
+        $query = $this->createQueryBuilder('p')
+            ->getQuery()
+            ->setFirstResult(($page - 1)*$limit)
+            ->setMaxResults($limit);
+        return new Paginator($query);
+    }
 }

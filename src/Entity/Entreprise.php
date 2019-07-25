@@ -6,6 +6,7 @@ use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * @ApiResource()
@@ -17,41 +18,49 @@ class Entreprise
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
+     * @Groups({"list", "show"})
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"list", "show"})
      */
     private $NumeroCompte;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"list", "show"})
      */
     private $RaisonSociale;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"list", "show"})
      */
     private $Ninea;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Groups({"list", "show"})
      */
     private $Adresse;
 
     /**
      * @ORM\Column(type="bigint")
+     * @Groups({"list", "show"})
      */
     private $Solde;
 
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\Utilisateur", mappedBy="Entreprise")
+     *  @Groups({"list", "show"})
      */
     private $utilisateurs;
 
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\Depot", mappedBy="Entreprise")
+     * @Groups({"list", "show"})
      */
     private $depots;
 
