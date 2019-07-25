@@ -14,7 +14,7 @@ use Symfony\Component\Serializer\SerializerInterface;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 
 /**
- * @Route("/Projet-wari")
+ * @Route("/api")
  */
 class EntrepriseController extends AbstractController
 {
@@ -53,11 +53,13 @@ class EntrepriseController extends AbstractController
     }
 
     /**
-     * @Route("/entreprises", name="add_entreprise", methods={"POST"})
+     * @Route("/add/entreprises", name="add_entreprise", methods={"POST"})
      */
     public function new(Request $request, SerializerInterface $serializer, EntityManagerInterface $entityManager)
     {
+        
         $entreprise = $serializer->deserialize($request->getContent(), Entreprise::class,'json');
+        $entityManager->persist($entreprise);
         $entityManager->flush();
         $data = [
             'status' => 201,
@@ -65,36 +67,5 @@ class EntrepriseController extends AbstractController
         ];
         return new JsonResponse($data, 201);
     }
-
-     /**
-     * @Route("/entreprises/{id}", name="update_entreprise", methods={"PUT"})
-     */
-    public function update(Request $request, SerializerInterface $serializer, Entreprise $entreprise, ValidatorInterface $validator, EntityManagerInterface $entityManager)
-    {
-        $entrepriseUpdate = $entityManager->getRepository(Entreprise::class)->find($entreprise->getId());
-        $data = json_decode($request->getContent());
-        foreach ($data as $key => $value){
-            if($key && !empty($value)) {
-                $statut = ucfirst($key);
-                $setter = 'set'.$statut;
-                $entrepriseUpdate->$setter($value);
-            }
-        }
-        $errors = $validator->validate($entrepriseUpdate);
-        if(count($errors)) {
-            $errors = $serializer->serialize($errors, 'json');
-            return new Response($errors, 500, [
-                'Content-Type' => 'application/json'
-            ]);
-        }
-        $entityManager->flush();
-        $data = [
-            'status' => 200,
-            'message' => 'L\'entreprise a bien été mis à jour'
-        ];
-        return new JsonResponse($data);
-    }
-
-
     
 }
