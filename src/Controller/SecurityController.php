@@ -12,6 +12,9 @@ use FOS\RestBundle\Controller\FOSRestController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
+use App\Entity\Entreprise;
+use App\Repository\UtilisateurRepository;
+
 /**
  * @Route("/api",name="_api")
  */
@@ -22,8 +25,9 @@ class SecurityController extends FOSRestController
      * @Route("/inscription", name="inscription", methods={"POST"})
      * @Security("has_role('ROLE_Super-admin','ROLE_admin-Principal','ROLE_admin')")
      */
-    public function inscriptionUtilisateur(Request $request,ObjectManager $manager,UserPasswordEncoderInterface $encoder)
+    public function inscriptionUtilisateur(Request $request,ObjectManager $manager,UserPasswordEncoderInterface $encoder, UtilisateurRepository $repo)
     {//inscription
+        
         $user=new Utilisateur();
         
         $form=$this->createForm(UtilisateurType::class,$user);
@@ -35,9 +39,14 @@ class SecurityController extends FOSRestController
             $hash=$encoder->encodePassword($user, $user->getPassword());
             $user->setPassword($hash);
             $profil=$user->getProfil();
-            
             $libelle=$profil->getLibelle();
+
+            $idEntreprise=$user->getEntreprise()->getId();
+            $profil=$user->getProfil()->getId();
+            //
+            
             if($libelle=='Super-admin'){
+                
               $user->setRoles(['ROLE_Super-admin']);  
             }
             elseif($libelle=='Caissier'){
@@ -46,16 +55,22 @@ class SecurityController extends FOSRestController
             elseif($libelle=='admin-Principal'){
                 $user->setRoles(['ROLE_admin-Principal']); 
             }
-            elseif($libelle=='admin'){
+            elseif($libelle=='admin'){//max 2
+                if(count($repo->findBy(['Entreprise' => $idEntreprise,'Profil'=>$profil]))>=2){
+                    return $this->handleView($this->view(['Impossible'=>'Il y\'a déja 2 admin pour votre entreprise'],Response::HTTP_CONFLICT));
+                }
                 $user->setRoles(['ROLE_admin']); 
             }
-            elseif($libelle=='utilisateur'){
+            elseif($libelle=='utilisateur'){//max 5
+                if(count($repo->findBy(['Entreprise' => $idEntreprise,'Profil'=>$profil]))>=5){
+                    return $this->handleView($this->view(['Impossible'=>'Il y\'a déja 2 admin pour votre entreprise'],Response::HTTP_CONFLICT));
+                }
                 $user->setRoles(['ROLE_utilisateur']);
             }
             $user->setStatus('Actif');
             $manager->persist($user);
             $manager->flush();
-        return $this->handleView($this->view(['status'=>'ok'],Response::HTTP_CREATED));
+            return $this->handleView($this->view(['status'=>'ok'],Response::HTTP_CREATED));
         }
         return $this->handleView($this->view($form->getErrors()));
     }
@@ -64,6 +79,8 @@ class SecurityController extends FOSRestController
      *@Route("/connexion", name="api_login", methods={"POST"})
      */
     public function login(){ /*gerer dans config packages security.yaml*/}
+
+
 }
     /*
         1 - Aller dans config -> packages -> fos_rest.yaml

@@ -13,6 +13,7 @@ class AppFixtures extends Fixture
     public function load(ObjectManager $manager)
     {
         $motDePass='$2y$13$ABDZmhTxOlcf4HHbTC3BJeNFZuL/ad/uMTdZgCJZLYYQcSQP0LTKG';
+        $actif='Actif';
         $profilSup=new Profil();
         $profilSup->setLibelle('Super-admin');
         $manager->persist($profilSup);
@@ -39,7 +40,8 @@ class AppFixtures extends Fixture
                     ->setRaisonSociale('Wari')
                     ->setNinea(strval(rand(150000000,979999999)))
                     ->setAdresse('Mermoz')
-                    ->setSolde(1000000);
+                    ->setSolde(1000000)
+                    ->setStatus($actif);
         $manager->persist($wari);
         $SupUser=new Utilisateur();
         $SupUser->setUsername('Abdou')
@@ -51,7 +53,7 @@ class AppFixtures extends Fixture
              ->setEmail('layendoyesn@gmail.com')
              ->setTelephone(rand(770000000,779999999))
              ->setNci(strval(rand(150000000,979999999)))
-             ->setStatus('Actif')
+             ->setStatus($actif)
              ->setProfil($profilSup); 
         $manager->persist($SupUser);
 
@@ -62,7 +64,8 @@ class AppFixtures extends Fixture
                         ->setRaisonSociale($faker->company)
                         ->setNinea(strval(rand(150000000,979999999)))
                         ->setAdresse($faker->streetAddress)
-                        ->setSolde(rand(1000000,10000000));
+                        ->setSolde(rand(1000000,10000000))
+                        ->setStatus($actif);
             $manager->persist($entreprise);
             
             
@@ -77,7 +80,7 @@ class AppFixtures extends Fixture
                     ->setEmail($faker->email)
                     ->setTelephone(rand(770000000,779999999))
                     ->setNci(strval(rand(150000000,979999999)))
-                    ->setStatus('Actif');
+                    ->setStatus($actif);
 
                 if($j==1){
                     
