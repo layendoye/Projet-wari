@@ -23,7 +23,7 @@ class Entreprise
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, unique=true)
      * @Groups({"list", "show"})
      */
     private $NumeroCompte;
@@ -35,7 +35,7 @@ class Entreprise
     private $RaisonSociale;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, unique=true)
      * @Groups({"list", "show"})
      */
     private $Ninea;

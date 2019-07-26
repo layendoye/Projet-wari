@@ -2,18 +2,19 @@
 
 namespace App\Controller;
 
+use App\Entity\Entreprise;
 use App\Entity\Utilisateur;
 use App\Form\UtilisateurType;
+use App\Repository\UtilisateurRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use FOS\RestBundle\Controller\FOSRestController;
 use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
+use Symfony\Component\Security\Core\User\UserInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
-use App\Entity\Entreprise;
-use App\Repository\UtilisateurRepository;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 /**
  * @Route("/api",name="_api")
@@ -25,11 +26,21 @@ class SecurityController extends FOSRestController
      * @Route("/inscription", name="inscription", methods={"POST"})
      * @Security("has_role('ROLE_Super-admin','ROLE_admin-Principal','ROLE_admin')")
      */
-    public function inscriptionUtilisateur(Request $request,ObjectManager $manager,UserPasswordEncoderInterface $encoder, UtilisateurRepository $repo)
-    {//inscription
-        
+    public function inscriptionUtilisateur(Request $request,ObjectManager $manager,UserPasswordEncoderInterface $encoder, UtilisateurRepository $repo, UserInterface $Userconnecte){
+        /*
+          Début variable utilisé frequement 
+        */
+        $impossible='Impossible';
+        $TextBloquerProfil='Votre profil ne vous permet pas de créer ce type d\'utilisateur';
+        $libSupAdmi='Super-admin';
+        $libCaissier='Caissier';
+        $libAdmiPrinc='admin-Principal';
+        $libAdmi='admin';
+        /*
+          Fin variable utilisé frequement 
+        */
+        var_dump($request->request); die();
         $user=new Utilisateur();
-        
         $form=$this->createForm(UtilisateurType::class,$user);
         
         $data=json_decode($request->getContent(),true);//Récupère une chaîne encodée JSON et la convertit en une variable PHP
@@ -44,26 +55,40 @@ class SecurityController extends FOSRestController
             $idEntreprise=$user->getEntreprise()->getId();
             $profil=$user->getProfil()->getId();
             //
-            
-            if($libelle=='Super-admin'){
-                
-              $user->setRoles(['ROLE_Super-admin']);  
+            $profilUserConnecte=$Userconnecte->getProfil()->getLibelle();
+            if($libelle==$libSupAdmi){//ajout super-admin
+                if($profilUserConnecte!=$libSupAdmi){
+                    return $this->handleView($this->view([$impossible => $TextBloquerProfil],Response::HTTP_CONFLICT));
+                }
+                $user->setRoles(['ROLE_Super-admin']);  
             }
-            elseif($libelle=='Caissier'){
+            elseif($libelle==$libCaissier){
+                if($profilUserConnecte!=$libSupAdmi){
+                    return $this->handleView($this->view([$impossible => $TextBloquerProfil],Response::HTTP_CONFLICT));
+                }
                 $user->setRoles(['ROLE_Caissier']); 
             }
-            elseif($libelle=='admin-Principal'){
+            elseif($libelle==$libAdmiPrinc){
+                
+                if($profilUserConnecte!=$libSupAdmi){
+                    return $this->handleView($this->view([$impossible => $TextBloquerProfil],Response::HTTP_CONFLICT));
+                }
                 $user->setRoles(['ROLE_admin-Principal']); 
             }
-            elseif($libelle=='admin'){//max 2
+            elseif($libelle==$libAdmi){//ajout admin simple max 2
+            
+                if($profilUserConnecte!=$libAdmiPrinc){//si le profil est different de admin-principal
+                    return $this->handleView($this->view([$impossible => $TextBloquerProfil],Response::HTTP_CONFLICT));
+                }
                 if(count($repo->findBy(['Entreprise' => $idEntreprise,'Profil'=>$profil]))>=2){
-                    return $this->handleView($this->view(['Impossible'=>'Il y\'a déja 2 admin pour votre entreprise'],Response::HTTP_CONFLICT));
+                    return $this->handleView($this->view([$impossible =>'Il y\'a déja 2 admin pour votre entreprise'],Response::HTTP_CONFLICT));
                 }
                 $user->setRoles(['ROLE_admin']); 
             }
             elseif($libelle=='utilisateur'){//max 5
+
                 if(count($repo->findBy(['Entreprise' => $idEntreprise,'Profil'=>$profil]))>=5){
-                    return $this->handleView($this->view(['Impossible'=>'Il y\'a déja 2 admin pour votre entreprise'],Response::HTTP_CONFLICT));
+                    return $this->handleView($this->view([$impossible=>'Il y\'a déja 5 utilisateurs pour votre entreprise'],Response::HTTP_CONFLICT));
                 }
                 $user->setRoles(['ROLE_utilisateur']);
             }

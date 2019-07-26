@@ -68,4 +68,7 @@ class EntrepriseController extends AbstractController
         return new JsonResponse($data, 201);
     }
     
+    /**
+     * @Route("/depot/entreprise")
+     */
 }
