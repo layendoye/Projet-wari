@@ -34,6 +34,12 @@ class Depot
      */
     private $Montant;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Utilisateur", inversedBy="depots")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $caissier;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -71,6 +77,18 @@ class Depot
     public function setMontant(int $Montant): self
     {
         $this->Montant = $Montant;
+
+        return $this;
+    }
+
+    public function getCaissier(): ?Utilisateur
+    {
+        return $this->caissier;
+    }
+
+    public function setCaissier(?Utilisateur $caissier): self
+    {
+        $this->caissier = $caissier;
 
         return $this;
     }

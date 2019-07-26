@@ -2,31 +2,28 @@
 
 namespace App\Controller;
 
-use App\Entity\Entreprise;
 use App\Entity\Utilisateur;
 use App\Form\UtilisateurType;
-use App\Repository\UtilisateurRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use FOS\RestBundle\Controller\FOSRestController;
-use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Security\Core\User\UserInterface;
+use FOS\RestBundle\Controller\AbstractFOSRestController;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 /**
  * @Route("/api",name="_api")
  */
-class SecurityController extends FOSRestController
+class SecurityController extends AbstractFOSRestController
 {
     //aller dans config -> packages -> packages  -> Security.yaml
     /**
      * @Route("/inscription", name="inscription", methods={"POST"})
-     * @Security("has_role('ROLE_Super-admin','ROLE_admin-Principal','ROLE_admin')")
      */
-    public function inscriptionUtilisateur(Request $request,ObjectManager $manager,UserPasswordEncoderInterface $encoder, UtilisateurRepository $repo, UserInterface $Userconnecte){
+    public function inscriptionUtilisateur(Request $request,ObjectManager $manager,UserPasswordEncoderInterface $encoder, UserInterface $Userconnecte){
         /*
           Début variable utilisé frequement 
         */
@@ -39,7 +36,7 @@ class SecurityController extends FOSRestController
         /*
           Fin variable utilisé frequement 
         */
-        var_dump($request->request); die();
+        
         $user=new Utilisateur();
         $form=$this->createForm(UtilisateurType::class,$user);
         
@@ -49,46 +46,36 @@ class SecurityController extends FOSRestController
         if($form->isSubmitted() && $form->isValid()){
             $hash=$encoder->encodePassword($user, $user->getPassword());
             $user->setPassword($hash);
-            $profil=$user->getProfil();
-            $libelle=$profil->getLibelle();
+            $libelle=$user->getProfil()->getLibelle();
 
-            $idEntreprise=$user->getEntreprise()->getId();
-            $profil=$user->getProfil()->getId();
-            //
             $profilUserConnecte=$Userconnecte->getProfil()->getLibelle();
             if($libelle==$libSupAdmi){//ajout super-admin
-                if($profilUserConnecte!=$libSupAdmi){
+                if($profilUserConnecte!=$libSupAdmi){//si le profil est different de Super-admin
                     return $this->handleView($this->view([$impossible => $TextBloquerProfil],Response::HTTP_CONFLICT));
                 }
                 $user->setRoles(['ROLE_Super-admin']);  
             }
-            elseif($libelle==$libCaissier){
+            elseif($libelle==$libCaissier){//ajout caissier
                 if($profilUserConnecte!=$libSupAdmi){
                     return $this->handleView($this->view([$impossible => $TextBloquerProfil],Response::HTTP_CONFLICT));
                 }
                 $user->setRoles(['ROLE_Caissier']); 
             }
-            elseif($libelle==$libAdmiPrinc){
-                
+            elseif($libelle==$libAdmiPrinc){//ajout admin-principal
                 if($profilUserConnecte!=$libSupAdmi){
                     return $this->handleView($this->view([$impossible => $TextBloquerProfil],Response::HTTP_CONFLICT));
                 }
                 $user->setRoles(['ROLE_admin-Principal']); 
             }
-            elseif($libelle==$libAdmi){//ajout admin simple max 2
-            
+            elseif($libelle==$libAdmi){
                 if($profilUserConnecte!=$libAdmiPrinc){//si le profil est different de admin-principal
                     return $this->handleView($this->view([$impossible => $TextBloquerProfil],Response::HTTP_CONFLICT));
                 }
-                if(count($repo->findBy(['Entreprise' => $idEntreprise,'Profil'=>$profil]))>=2){
-                    return $this->handleView($this->view([$impossible =>'Il y\'a déja 2 admin pour votre entreprise'],Response::HTTP_CONFLICT));
-                }
                 $user->setRoles(['ROLE_admin']); 
             }
-            elseif($libelle=='utilisateur'){//max 5
-
-                if(count($repo->findBy(['Entreprise' => $idEntreprise,'Profil'=>$profil]))>=5){
-                    return $this->handleView($this->view([$impossible=>'Il y\'a déja 5 utilisateurs pour votre entreprise'],Response::HTTP_CONFLICT));
+            elseif($libelle=='utilisateur'){
+                if($profilUserConnecte!=$libAdmiPrinc){//si le profil est different de admin-principal
+                    return $this->handleView($this->view([$impossible => $TextBloquerProfil],Response::HTTP_CONFLICT));
                 }
                 $user->setRoles(['ROLE_utilisateur']);
             }

@@ -88,10 +88,16 @@ class Utilisateur implements UserInterface
      */
     private $Profil;
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Depot", mappedBy="caissier")
+     */
+    private $depots;
+
     public function __construct()
     {
         $this->envois = new ArrayCollection();
         $this->retraits = new ArrayCollection();
+        $this->depots = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -321,6 +327,37 @@ class Utilisateur implements UserInterface
     public function setProfil(?Profil $Profil): self
     {
         $this->Profil = $Profil;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Depot[]
+     */
+    public function getDepots(): Collection
+    {
+        return $this->depots;
+    }
+
+    public function addDepot(Depot $depot): self
+    {
+        if (!$this->depots->contains($depot)) {
+            $this->depots[] = $depot;
+            $depot->setCaissier($this);
+        }
+
+        return $this;
+    }
+
+    public function removeDepot(Depot $depot): self
+    {
+        if ($this->depots->contains($depot)) {
+            $this->depots->removeElement($depot);
+            // set the owning side to null (unless already changed)
+            if ($depot->getCaissier() === $this) {
+                $depot->setCaissier(null);
+            }
+        }
 
         return $this;
     }

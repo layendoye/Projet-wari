@@ -1,7 +1,7 @@
 security:
     encoders:
         App\Entity\Utilisateur:
-            algorithm: bcrypt
+            algorithm: auto
 
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
     providers:
@@ -25,6 +25,7 @@ security:
                 success_handler: lexik_jwt_authentication.handler.authentication_success
                 failure_handler: lexik_jwt_authentication.handler.authentication_failure
         api:
+            http_basic : ~ #pour les testes
             pattern:   ^/api
             stateless: true
             guard:
