@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="Project Test Suite" tests="4" assertions="4" errors="0" failures="1" skipped="0" time="6.460064">
-    <testsuite name="App\Tests\SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" tests="4" assertions="4" errors="0" failures="1" skipped="0" time="6.460064">
-      <testcase name="testInscriptionUtilisateurok" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="10" assertions="1" time="1.930789">
-        <failure type="PHPUnit\Framework\ExpectationFailedException">App\Tests\SecurityControllerTest::testInscriptionUtilisateurok
-Failed asserting that 500 is identical to 201.
-
-/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php:32
-</failure>
+  <testsuite name="Project Test Suite" tests="11" assertions="11" errors="0" failures="0" skipped="0" time="11.696442">
+    <testsuite name="App\Tests\SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" tests="11" assertions="11" errors="0" failures="0" skipped="0" time="11.696442">
+      <testcase name="testInscriptionUtilisateurok1" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="10" assertions="1" time="1.706154">
         <system-out>/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php:31:
-class Symfony\Component\HttpFoundation\Response#1178 (6) {
+class Symfony\Component\HttpFoundation\Response#1361 (6) {
   public $headers =&gt;
-  class Symfony\Component\HttpFoundation\ResponseHeaderBag#1117 (5) {
+  class Symfony\Component\HttpFoundation\ResponseHeaderBag#1346 (5) {
     protected $computedCacheControl =&gt;
     array(2) {
       'no-cache' =&gt;
@@ -24,23 +19,19 @@ class Symfony\Component\HttpFoundation\Response#1178 (6) {
     }
     protected $headerNames =&gt;
     array(5) {
-      'content-type' =&gt;
-      string(12) "Content-Type"
       'cache-control' =&gt;
       string(13) "Cache-Control"
       'date' =&gt;
       string(4) "Date"
-      'x-robots-tag' =&gt;
-      string(12) "X-Robots-Tag"
+      'content-type' =&gt;
+      string(12) "Content-Type"
       'link' =&gt;
       string(4) "Link"
+      'x-robots-tag' =&gt;
+      string(12) "X-Robots-Tag"
     }
     protected $headers =&gt;
     array(5) {
-      'content-type' =&gt;
-      array(1) {
-        ...
-      }
       'cache-control' =&gt;
       array(1) {
         ...
@@ -49,11 +40,15 @@ class Symfony\Component\HttpFoundation\Response#1178 (6) {
       array(1) {
         ...
       }
-      'x-robots-tag' =&gt;
+      'content-type' =&gt;
       array(1) {
         ...
       }
       'link' =&gt;
+      array(1) {
+        ...
+      }
+      'x-robots-tag' =&gt;
       array(1) {
         ...
       }
@@ -63,23 +58,23 @@ class Symfony\Component\HttpFoundation\Response#1178 (6) {
     }
   }
   protected $content =&gt;
-  string(39930) "{"error":{"code":500,"message":"Internal Server Error","exception":[{"message":"An exception occurred while executing 'INSERT INTO utilisateur (username, roles, password, nom, email, telephone, nci, status, entreprise_id, profil_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)' with params [\"awaciss2\", \"[\\\"ROLE_Caissier\\\"]\", \"$argon2id$v=19$m=65536,t=6,p=1$sHu7Oy3W6+zGDA3Lje7qfg$EooktH0qmEQuhCBM4b6wCbruekbk5tfGdeJch4VTPrs\", \"Awa ciss\", \"evawa2@gmail.com\", 7785446467, \"1751 1500 07854622\", \"Actif\""...
+  string(15) "{"status":"ok"}"
   protected $version =&gt;
   string(3) "1.1"
   protected $statusCode =&gt;
-  int(500)
+  int(201)
   protected $statusText =&gt;
-  string(21) "Internal Server Error"
+  string(7) "Created"
   protected $charset =&gt;
   string(5) "UTF-8"
 }
 </system-out>
       </testcase>
-      <testcase name="testInscriptionUtilisateurk01" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="34" assertions="1" time="1.859178">
+      <testcase name="testInscriptionUtilisateurok2" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="34" assertions="1" time="1.191680">
         <system-out>/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php:55:
-class Symfony\Component\HttpFoundation\Response#1857 (6) {
+class Symfony\Component\HttpFoundation\Response#1809 (6) {
   public $headers =&gt;
-  class Symfony\Component\HttpFoundation\ResponseHeaderBag#1842 (5) {
+  class Symfony\Component\HttpFoundation\ResponseHeaderBag#1808 (5) {
     protected $computedCacheControl =&gt;
     array(2) {
       'no-cache' =&gt;
@@ -131,23 +126,227 @@ class Symfony\Component\HttpFoundation\Response#1857 (6) {
     }
   }
   protected $content =&gt;
-  string(84) "{"Impossible":"Votre profil ne vous permet pas de cr\u00e9er ce type d'utilisateur"}"
+  string(15) "{"status":"ok"}"
   protected $version =&gt;
   string(3) "1.1"
   protected $statusCode =&gt;
-  int(409)
+  int(201)
   protected $statusText =&gt;
-  string(8) "Conflict"
+  string(7) "Created"
   protected $charset =&gt;
   string(5) "UTF-8"
 }
 </system-out>
       </testcase>
-      <testcase name="testInscriptionUtilisateurk02" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="58" assertions="1" time="1.566113">
+      <testcase name="testInscriptionUtilisateurok3" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="58" assertions="1" time="1.198928">
         <system-out>/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php:79:
-class Symfony\Component\HttpFoundation\Response#2248 (6) {
+class Symfony\Component\HttpFoundation\Response#2188 (6) {
   public $headers =&gt;
-  class Symfony\Component\HttpFoundation\ResponseHeaderBag#2247 (5) {
+  class Symfony\Component\HttpFoundation\ResponseHeaderBag#2187 (5) {
+    protected $computedCacheControl =&gt;
+    array(2) {
+      'no-cache' =&gt;
+      bool(true)
+      'private' =&gt;
+      bool(true)
+    }
+    protected $cookies =&gt;
+    array(0) {
+    }
+    protected $headerNames =&gt;
+    array(5) {
+      'cache-control' =&gt;
+      string(13) "Cache-Control"
+      'date' =&gt;
+      string(4) "Date"
+      'content-type' =&gt;
+      string(12) "Content-Type"
+      'link' =&gt;
+      string(4) "Link"
+      'x-robots-tag' =&gt;
+      string(12) "X-Robots-Tag"
+    }
+    protected $headers =&gt;
+    array(5) {
+      'cache-control' =&gt;
+      array(1) {
+        ...
+      }
+      'date' =&gt;
+      array(1) {
+        ...
+      }
+      'content-type' =&gt;
+      array(1) {
+        ...
+      }
+      'link' =&gt;
+      array(1) {
+        ...
+      }
+      'x-robots-tag' =&gt;
+      array(1) {
+        ...
+      }
+    }
+    protected $cacheControl =&gt;
+    array(0) {
+    }
+  }
+  protected $content =&gt;
+  string(15) "{"status":"ok"}"
+  protected $version =&gt;
+  string(3) "1.1"
+  protected $statusCode =&gt;
+  int(201)
+  protected $statusText =&gt;
+  string(7) "Created"
+  protected $charset =&gt;
+  string(5) "UTF-8"
+}
+</system-out>
+      </testcase>
+      <testcase name="testInscriptionUtilisateurok4" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="82" assertions="1" time="0.996967">
+        <system-out>/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php:103:
+class Symfony\Component\HttpFoundation\Response#5626 (6) {
+  public $headers =&gt;
+  class Symfony\Component\HttpFoundation\ResponseHeaderBag#5625 (5) {
+    protected $computedCacheControl =&gt;
+    array(2) {
+      'no-cache' =&gt;
+      bool(true)
+      'private' =&gt;
+      bool(true)
+    }
+    protected $cookies =&gt;
+    array(0) {
+    }
+    protected $headerNames =&gt;
+    array(5) {
+      'cache-control' =&gt;
+      string(13) "Cache-Control"
+      'date' =&gt;
+      string(4) "Date"
+      'content-type' =&gt;
+      string(12) "Content-Type"
+      'link' =&gt;
+      string(4) "Link"
+      'x-robots-tag' =&gt;
+      string(12) "X-Robots-Tag"
+    }
+    protected $headers =&gt;
+    array(5) {
+      'cache-control' =&gt;
+      array(1) {
+        ...
+      }
+      'date' =&gt;
+      array(1) {
+        ...
+      }
+      'content-type' =&gt;
+      array(1) {
+        ...
+      }
+      'link' =&gt;
+      array(1) {
+        ...
+      }
+      'x-robots-tag' =&gt;
+      array(1) {
+        ...
+      }
+    }
+    protected $cacheControl =&gt;
+    array(0) {
+    }
+  }
+  protected $content =&gt;
+  string(15) "{"status":"ok"}"
+  protected $version =&gt;
+  string(3) "1.1"
+  protected $statusCode =&gt;
+  int(201)
+  protected $statusText =&gt;
+  string(7) "Created"
+  protected $charset =&gt;
+  string(5) "UTF-8"
+}
+</system-out>
+      </testcase>
+      <testcase name="testInscriptionUtilisateurok5" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="106" assertions="1" time="1.026118">
+        <system-out>/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php:127:
+class Symfony\Component\HttpFoundation\Response#840 (6) {
+  public $headers =&gt;
+  class Symfony\Component\HttpFoundation\ResponseHeaderBag#844 (5) {
+    protected $computedCacheControl =&gt;
+    array(2) {
+      'no-cache' =&gt;
+      bool(true)
+      'private' =&gt;
+      bool(true)
+    }
+    protected $cookies =&gt;
+    array(0) {
+    }
+    protected $headerNames =&gt;
+    array(5) {
+      'cache-control' =&gt;
+      string(13) "Cache-Control"
+      'date' =&gt;
+      string(4) "Date"
+      'content-type' =&gt;
+      string(12) "Content-Type"
+      'link' =&gt;
+      string(4) "Link"
+      'x-robots-tag' =&gt;
+      string(12) "X-Robots-Tag"
+    }
+    protected $headers =&gt;
+    array(5) {
+      'cache-control' =&gt;
+      array(1) {
+        ...
+      }
+      'date' =&gt;
+      array(1) {
+        ...
+      }
+      'content-type' =&gt;
+      array(1) {
+        ...
+      }
+      'link' =&gt;
+      array(1) {
+        ...
+      }
+      'x-robots-tag' =&gt;
+      array(1) {
+        ...
+      }
+    }
+    protected $cacheControl =&gt;
+    array(0) {
+    }
+  }
+  protected $content =&gt;
+  string(15) "{"status":"ok"}"
+  protected $version =&gt;
+  string(3) "1.1"
+  protected $statusCode =&gt;
+  int(201)
+  protected $statusText =&gt;
+  string(7) "Created"
+  protected $charset =&gt;
+  string(5) "UTF-8"
+}
+</system-out>
+      </testcase>
+      <testcase name="testInscriptionUtilisateurk01" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="130" assertions="1" time="1.129685">
+        <system-out>/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php:151:
+class Symfony\Component\HttpFoundation\Response#8234 (6) {
+  public $headers =&gt;
+  class Symfony\Component\HttpFoundation\ResponseHeaderBag#8823 (5) {
     protected $computedCacheControl =&gt;
     array(2) {
       'no-cache' =&gt;
@@ -211,11 +410,11 @@ class Symfony\Component\HttpFoundation\Response#2248 (6) {
 }
 </system-out>
       </testcase>
-      <testcase name="testInscriptionUtilisateurk03" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="82" assertions="1" time="1.103984">
-        <system-out>/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php:103:
-class Symfony\Component\HttpFoundation\Response#3931 (6) {
+      <testcase name="testInscriptionUtilisateurk02" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="154" assertions="1" time="1.113277">
+        <system-out>/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php:175:
+class Symfony\Component\HttpFoundation\Response#740 (6) {
   public $headers =&gt;
-  class Symfony\Component\HttpFoundation\ResponseHeaderBag#3930 (5) {
+  class Symfony\Component\HttpFoundation\ResponseHeaderBag#737 (5) {
     protected $computedCacheControl =&gt;
     array(2) {
       'no-cache' =&gt;
@@ -274,6 +473,278 @@ class Symfony\Component\HttpFoundation\Response#3931 (6) {
   int(409)
   protected $statusText =&gt;
   string(8) "Conflict"
+  protected $charset =&gt;
+  string(5) "UTF-8"
+}
+</system-out>
+      </testcase>
+      <testcase name="testInscriptionUtilisateurk03" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="178" assertions="1" time="0.886659">
+        <system-out>/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php:199:
+class Symfony\Component\HttpFoundation\Response#8961 (6) {
+  public $headers =&gt;
+  class Symfony\Component\HttpFoundation\ResponseHeaderBag#8960 (5) {
+    protected $computedCacheControl =&gt;
+    array(2) {
+      'no-cache' =&gt;
+      bool(true)
+      'private' =&gt;
+      bool(true)
+    }
+    protected $cookies =&gt;
+    array(0) {
+    }
+    protected $headerNames =&gt;
+    array(5) {
+      'cache-control' =&gt;
+      string(13) "Cache-Control"
+      'date' =&gt;
+      string(4) "Date"
+      'content-type' =&gt;
+      string(12) "Content-Type"
+      'link' =&gt;
+      string(4) "Link"
+      'x-robots-tag' =&gt;
+      string(12) "X-Robots-Tag"
+    }
+    protected $headers =&gt;
+    array(5) {
+      'cache-control' =&gt;
+      array(1) {
+        ...
+      }
+      'date' =&gt;
+      array(1) {
+        ...
+      }
+      'content-type' =&gt;
+      array(1) {
+        ...
+      }
+      'link' =&gt;
+      array(1) {
+        ...
+      }
+      'x-robots-tag' =&gt;
+      array(1) {
+        ...
+      }
+    }
+    protected $cacheControl =&gt;
+    array(0) {
+    }
+  }
+  protected $content =&gt;
+  string(84) "{"Impossible":"Votre profil ne vous permet pas de cr\u00e9er ce type d'utilisateur"}"
+  protected $version =&gt;
+  string(3) "1.1"
+  protected $statusCode =&gt;
+  int(409)
+  protected $statusText =&gt;
+  string(8) "Conflict"
+  protected $charset =&gt;
+  string(5) "UTF-8"
+}
+</system-out>
+      </testcase>
+      <testcase name="testInscriptionUtilisateurk04" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="202" assertions="1" time="0.887108">
+        <system-out>/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php:223:
+class Symfony\Component\HttpFoundation\Response#2380 (6) {
+  public $headers =&gt;
+  class Symfony\Component\HttpFoundation\ResponseHeaderBag#2774 (5) {
+    protected $computedCacheControl =&gt;
+    array(2) {
+      'no-cache' =&gt;
+      bool(true)
+      'private' =&gt;
+      bool(true)
+    }
+    protected $cookies =&gt;
+    array(0) {
+    }
+    protected $headerNames =&gt;
+    array(5) {
+      'cache-control' =&gt;
+      string(13) "Cache-Control"
+      'date' =&gt;
+      string(4) "Date"
+      'content-type' =&gt;
+      string(12) "Content-Type"
+      'link' =&gt;
+      string(4) "Link"
+      'x-robots-tag' =&gt;
+      string(12) "X-Robots-Tag"
+    }
+    protected $headers =&gt;
+    array(5) {
+      'cache-control' =&gt;
+      array(1) {
+        ...
+      }
+      'date' =&gt;
+      array(1) {
+        ...
+      }
+      'content-type' =&gt;
+      array(1) {
+        ...
+      }
+      'link' =&gt;
+      array(1) {
+        ...
+      }
+      'x-robots-tag' =&gt;
+      array(1) {
+        ...
+      }
+    }
+    protected $cacheControl =&gt;
+    array(0) {
+    }
+  }
+  protected $content =&gt;
+  string(84) "{"Impossible":"Votre profil ne vous permet pas de cr\u00e9er ce type d'utilisateur"}"
+  protected $version =&gt;
+  string(3) "1.1"
+  protected $statusCode =&gt;
+  int(409)
+  protected $statusText =&gt;
+  string(8) "Conflict"
+  protected $charset =&gt;
+  string(5) "UTF-8"
+}
+</system-out>
+      </testcase>
+      <testcase name="testInscriptionUtilisateurk05" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="226" assertions="1" time="0.883059">
+        <system-out>/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php:247:
+class Symfony\Component\HttpFoundation\Response#1187 (6) {
+  public $headers =&gt;
+  class Symfony\Component\HttpFoundation\ResponseHeaderBag#1172 (5) {
+    protected $computedCacheControl =&gt;
+    array(2) {
+      'no-cache' =&gt;
+      bool(true)
+      'private' =&gt;
+      bool(true)
+    }
+    protected $cookies =&gt;
+    array(0) {
+    }
+    protected $headerNames =&gt;
+    array(5) {
+      'cache-control' =&gt;
+      string(13) "Cache-Control"
+      'date' =&gt;
+      string(4) "Date"
+      'content-type' =&gt;
+      string(12) "Content-Type"
+      'link' =&gt;
+      string(4) "Link"
+      'x-robots-tag' =&gt;
+      string(12) "X-Robots-Tag"
+    }
+    protected $headers =&gt;
+    array(5) {
+      'cache-control' =&gt;
+      array(1) {
+        ...
+      }
+      'date' =&gt;
+      array(1) {
+        ...
+      }
+      'content-type' =&gt;
+      array(1) {
+        ...
+      }
+      'link' =&gt;
+      array(1) {
+        ...
+      }
+      'x-robots-tag' =&gt;
+      array(1) {
+        ...
+      }
+    }
+    protected $cacheControl =&gt;
+    array(0) {
+    }
+  }
+  protected $content =&gt;
+  string(84) "{"Impossible":"Votre profil ne vous permet pas de cr\u00e9er ce type d'utilisateur"}"
+  protected $version =&gt;
+  string(3) "1.1"
+  protected $statusCode =&gt;
+  int(409)
+  protected $statusText =&gt;
+  string(8) "Conflict"
+  protected $charset =&gt;
+  string(5) "UTF-8"
+}
+</system-out>
+      </testcase>
+      <testcase name="testInscriptionUtilisateurk06" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="250" assertions="1" time="0.676807">
+        <system-out>/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php:271:
+class Symfony\Component\HttpFoundation\Response#3272 (6) {
+  public $headers =&gt;
+  class Symfony\Component\HttpFoundation\ResponseHeaderBag#755 (5) {
+    protected $computedCacheControl =&gt;
+    array(2) {
+      'no-cache' =&gt;
+      bool(true)
+      'private' =&gt;
+      bool(true)
+    }
+    protected $cookies =&gt;
+    array(0) {
+    }
+    protected $headerNames =&gt;
+    array(5) {
+      'cache-control' =&gt;
+      string(13) "Cache-Control"
+      'date' =&gt;
+      string(4) "Date"
+      'content-type' =&gt;
+      string(12) "Content-Type"
+      'link' =&gt;
+      string(4) "Link"
+      'x-robots-tag' =&gt;
+      string(12) "X-Robots-Tag"
+    }
+    protected $headers =&gt;
+    array(5) {
+      'cache-control' =&gt;
+      array(1) {
+        ...
+      }
+      'date' =&gt;
+      array(1) {
+        ...
+      }
+      'content-type' =&gt;
+      array(1) {
+        ...
+      }
+      'link' =&gt;
+      array(1) {
+        ...
+      }
+      'x-robots-tag' =&gt;
+      array(1) {
+        ...
+      }
+    }
+    protected $cacheControl =&gt;
+    array(0) {
+    }
+  }
+  protected $content =&gt;
+  string(193) "{"form":{"children":{"username":{},"password":{},"confirmPassword":{},"Nom":{},"Email":{},"Telephone":{"errors":["This value is not valid."]},"Nci":{},"Entreprise":{},"Profil":{}}},"errors":[]}"
+  protected $version =&gt;
+  string(3) "1.1"
+  protected $statusCode =&gt;
+  int(200)
+  protected $statusText =&gt;
+  string(2) "OK"
   protected $charset =&gt;
   string(5) "UTF-8"
 }
