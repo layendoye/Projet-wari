@@ -2,16 +2,19 @@
 
 namespace App\Controller;
 
+use App\Entity\Depot;
+use App\Form\DepotType;
 use App\Entity\Entreprise;
 use App\Repository\EntrepriseRepository;
 use Doctrine\ORM\EntityManagerInterface;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Serializer\SerializerInterface;
+use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 /**
  * @Route("/api")
@@ -105,4 +108,32 @@ class EntrepriseController extends AbstractController
     /**
      * @Route("/depot/entreprise")
      */
+
+     public function depot (Request $request, UserInterface $Userconnecte)
+     {
+         $depot = new Depot();
+
+         $form = $this->createForm(DepotType::class, $depot);
+         $data=json_decode($request->getContent(),true);
+         $form->submit($data);
+
+         if($form->isSubmitted() && $form->isValid())
+         {
+            $depot->setDate(new \DateTime());
+            $depot->setCaissier($Userconnecte);
+            $entreprise=$depot->getEntreprise();
+            $entreprise->setSolde($entreprise->getSolde()+$depot->getMontant());
+            $manager=$this->getDoctrine()->getManager();
+            $manager->persist($entreprise);
+            $manager->persist($depot);
+            $manager->flush();
+            $data = [
+                'status' => 201,
+                'message' => 'Le depot a bien été effectué '
+            ];
+            return new JsonResponse($data, 201);
+
+         }
+         return new JsonResponse($this->view($form->getErrors()), 500);
+     }
 }
