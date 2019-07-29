@@ -27,12 +27,11 @@ class SecurityController extends AbstractFOSRestController
         /*
           Début variable utilisé frequement 
         */
-        $impossible='Impossible';
-        $TextBloquerProfil='Votre profil ne vous permet pas de créer ce type d\'utilisateur';
         $libSupAdmi='Super-admin';
         $libCaissier='Caissier';
         $libAdmiPrinc='admin-Principal';
         $libAdmi='admin';
+        $utilisateur='utilisateur';
         /*
           Fin variable utilisé frequement 
         */
@@ -49,34 +48,28 @@ class SecurityController extends AbstractFOSRestController
             $libelle=$user->getProfil()->getLibelle();
 
             $profilUserConnecte=$Userconnecte->getProfil()->getLibelle();
-            if($libelle==$libSupAdmi){//ajout super-admin
-                if($profilUserConnecte!=$libSupAdmi){//si le profil est different de Super-admin
-                    return $this->handleView($this->view([$impossible => $TextBloquerProfil],Response::HTTP_CONFLICT));
-                }
+
+            if($libelle == $libSupAdmi   && $profilUserConnecte != $libSupAdmi   ||
+               $libelle == $libCaissier  && $profilUserConnecte != $libSupAdmi   ||
+               $libelle == $libAdmiPrinc && $profilUserConnecte != $libSupAdmi   ||
+               $libelle == $libAdmi      && $profilUserConnecte != $libAdmiPrinc ||
+               $libelle == $utilisateur  && $profilUserConnecte != $libAdmiPrinc
+            ){
+                return $this->handleView($this->view(['impossible' => 'Votre profil ne vous permet pas de créer ce type d\'utilisateur'],Response::HTTP_CONFLICT));
+            }
+            elseif($libelle==$libSupAdmi){//ajout super-admin
                 $user->setRoles(['ROLE_Super-admin']);  
             }
             elseif($libelle==$libCaissier){//ajout caissier
-                if($profilUserConnecte!=$libSupAdmi){
-                    return $this->handleView($this->view([$impossible => $TextBloquerProfil],Response::HTTP_CONFLICT));
-                }
                 $user->setRoles(['ROLE_Caissier']); 
             }
             elseif($libelle==$libAdmiPrinc){//ajout admin-principal
-                if($profilUserConnecte!=$libSupAdmi){
-                    return $this->handleView($this->view([$impossible => $TextBloquerProfil],Response::HTTP_CONFLICT));
-                }
                 $user->setRoles(['ROLE_admin-Principal']); 
             }
             elseif($libelle==$libAdmi){
-                if($profilUserConnecte!=$libAdmiPrinc){//si le profil est different de admin-principal
-                    return $this->handleView($this->view([$impossible => $TextBloquerProfil],Response::HTTP_CONFLICT));
-                }
                 $user->setRoles(['ROLE_admin']); 
             }
             elseif($libelle=='utilisateur'){
-                if($profilUserConnecte!=$libAdmiPrinc){//si le profil est different de admin-principal
-                    return $this->handleView($this->view([$impossible => $TextBloquerProfil],Response::HTTP_CONFLICT));
-                }
                 $user->setRoles(['ROLE_utilisateur']);
             }
             $user->setStatus('Actif');
@@ -91,8 +84,6 @@ class SecurityController extends AbstractFOSRestController
      *@Route("/connexion", name="api_login", methods={"POST"})
      */
     public function login(){ /*gerer dans config packages security.yaml*/}
-
-
 }
     /*
         1 - Aller dans config -> packages -> fos_rest.yaml

@@ -155,6 +155,30 @@ class SecurityControllerTest extends WebTestCase
     {
         $token = new UsernamePasswordToken('admin', null, 'api', ['ROLE_Super_admin']);
         $client = static::createClient([],[ 
+                'PHP_AUTH_USER' => 'awaciss2' ,
+                'PHP_AUTH_PW'   => 'azerty' ,
+            ]);
+        $crawler = $client->request('POST', '/api/inscription',[],[],['CONTENT_TYPE'=>"application/json"],
+            '{
+                "Nom":"aaooo",
+                "username": "sssoos7",
+                "password": "azerty",
+                "confirmPassword": "azerty",
+                "Entreprise": 3,
+                "Email":"wwwdos333@gmail.com",
+                "Telephone": "ok",
+                "Nci":"175171856333",
+                "Profil": 5
+            }'
+        );
+        $rep=$client->getResponse();
+        var_dump($rep);
+        $this->assertSame(200,$client->getResponse()->getStatusCode());
+    }
+    public function testInscriptionUtilisateurk03()
+    {
+        $token = new UsernamePasswordToken('admin', null, 'api', ['ROLE_Super_admin']);
+        $client = static::createClient([],[ 
                 'PHP_AUTH_USER' => 'Abdou' ,
                 'PHP_AUTH_PW'   => 'azerty' ,
             ]);
@@ -175,7 +199,7 @@ class SecurityControllerTest extends WebTestCase
         var_dump($rep);
         $this->assertSame(409,$client->getResponse()->getStatusCode());
     }
-    public function testInscriptionUtilisateurk03()
+    public function testInscriptionUtilisateurk04()
     {
         $token = new UsernamePasswordToken('admin', null, 'api', ['ROLE_Super_admin']);
         $client = static::createClient([],[ 
@@ -199,7 +223,7 @@ class SecurityControllerTest extends WebTestCase
         var_dump($rep);
         $this->assertSame(409,$client->getResponse()->getStatusCode());
     }
-    public function testInscriptionUtilisateurk04()
+    public function testInscriptionUtilisateurk05()
     {
         $token = new UsernamePasswordToken('admin', null, 'api', ['ROLE_Super_admin']);
         $client = static::createClient([],[ 
@@ -223,7 +247,7 @@ class SecurityControllerTest extends WebTestCase
         var_dump($rep);
         $this->assertSame(409,$client->getResponse()->getStatusCode());
     }
-    public function testInscriptionUtilisateurk05()
+    public function testInscriptionUtilisateurk06()
     {
         $token = new UsernamePasswordToken('admin', null, 'api', ['ROLE_Super_admin']);
         $client = static::createClient([],[ 
@@ -247,29 +271,4 @@ class SecurityControllerTest extends WebTestCase
         var_dump($rep);
         $this->assertSame(409,$client->getResponse()->getStatusCode());
     }
-    public function testInscriptionUtilisateurk06()
-    {
-        $token = new UsernamePasswordToken('admin', null, 'api', ['ROLE_Super_admin']);
-        $client = static::createClient([],[ 
-                'PHP_AUTH_USER' => 'awaciss2' ,
-                'PHP_AUTH_PW'   => 'azerty' ,
-            ]);
-        $crawler = $client->request('POST', '/api/inscription',[],[],['CONTENT_TYPE'=>"application/json"],
-            '{
-                "Nom":"aaooo",
-                "username": "sssoos7",
-                "password": "azerty",
-                "confirmPassword": "azerty",
-                "Entreprise": 3,
-                "Email":"wwwdos333@gmail.com",
-                "Telephone": "ok",
-                "Nci":"175171856333",
-                "Profil": 5
-            }'
-        );
-        $rep=$client->getResponse();
-        var_dump($rep);
-        $this->assertSame(200,$client->getResponse()->getStatusCode());
-    }
-    /**/
 }

@@ -6,6 +6,8 @@
 parameters:
 
 services:
+    app.user_checker :
+        class : App\Entity\UserChecker # pour les utilisateurs bloqués
     # default configuration for services in *this* file
     _defaults:
         autowire: true      # Automatically injects dependencies in your services.
