@@ -63,27 +63,6 @@ class SecurityController extends AbstractFOSRestController
                     $user->setEntreprise($Userconnecte->getEntreprise());//si ajout caissier il sera dans la même entreprise que le super-admin, si admin ou utilisateur il sera dans la même entreprise que l'admin-principal qui les a créé
                 }
             }
-
-            /*
-            elseif($libelle==$libSupAdmi){//ajout super-admin
-                $user->setRoles(['ROLE_Super-admin'])
-                     ->setEntreprise($Userconnecte->getEntreprise());//(si il y en a d'autres) les super-admin sont dans la même entreprise que le super-admin (wari)
-            }
-            elseif($libelle==$libCaissier){//ajout caissier
-                $user->setRoles(['ROLE_Caissier'])
-                     ->setEntreprise($Userconnecte->getEntreprise());//le caissier est dans la même entreprise que le super-admin
-            }
-            elseif($libelle==$libAdmiPrinc){//ajout admin-principal
-                $user->setRoles(['ROLE_admin-Principal']); 
-            }
-            elseif($libelle==$libAdmi){
-                $user->setRoles(['ROLE_admin'])
-                     ->setEntreprise($Userconnecte->getEntreprise()); //les admins sont dans la même entreprise que le d amin-principal
-            }
-            elseif($libelle=='utilisateur'){
-                $user->setRoles(['ROLE_utilisateur'])
-                     ->setEntreprise($Userconnecte->getEntreprise());//les utilisateurs sont dans la même entreprise que le d amin-principal
-            }**/
             $user->setStatus('Actif');
             $manager->persist($user);
             $manager->flush();
