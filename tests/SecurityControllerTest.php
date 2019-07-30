@@ -3,16 +3,15 @@
 namespace App\Tests;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
-use Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken;
 
 class SecurityControllerTest extends WebTestCase
 {
     public function testInscriptionUtilisateurok1()
     {
-        $token = new UsernamePasswordToken('admin', null, 'api', ['ROLE_Super_admin']);
+        
         $client = static::createClient([],[ 
                 'PHP_AUTH_USER' => 'Abdou' ,
-                'PHP_AUTH_PW'   => 'azerty' ,
+                'PHP_AUTH_PW'   => 'azerty'
             ]);
         $crawler = $client->request('POST', '/api/inscription',[],[],['CONTENT_TYPE'=>"application/json"],
             '{
@@ -31,9 +30,9 @@ class SecurityControllerTest extends WebTestCase
         var_dump($rep);
         $this->assertSame(201,$client->getResponse()->getStatusCode());
     }
+    
     public function testInscriptionUtilisateurok2()
     {
-        $token = new UsernamePasswordToken('admin', null, 'api', ['ROLE_Super_admin']);
         $client = static::createClient([],[ 
                 'PHP_AUTH_USER' => 'Abdou' ,
                 'PHP_AUTH_PW'   => 'azerty' ,
@@ -57,7 +56,7 @@ class SecurityControllerTest extends WebTestCase
     }
     public function testInscriptionUtilisateurok3()
     {
-        $token = new UsernamePasswordToken('admin', null, 'api', ['ROLE_Super_admin']);
+        
         $client = static::createClient([],[ 
                 'PHP_AUTH_USER' => 'Abdou' ,
                 'PHP_AUTH_PW'   => 'azerty' ,
@@ -81,7 +80,7 @@ class SecurityControllerTest extends WebTestCase
     }
     public function testInscriptionUtilisateurok4()
     {
-        $token = new UsernamePasswordToken('admin', null, 'api', ['ROLE_Super_admin']);
+        
         $client = static::createClient([],[ 
                 'PHP_AUTH_USER' => 'admPrincipale1' ,
                 'PHP_AUTH_PW'   => 'azerty' ,
@@ -105,7 +104,7 @@ class SecurityControllerTest extends WebTestCase
     }
     public function testInscriptionUtilisateurok5()
     {
-        $token = new UsernamePasswordToken('admin', null, 'api', ['ROLE_Super_admin']);
+        
         $client = static::createClient([],[ 
                 'PHP_AUTH_USER' => 'admPrincipale1' ,
                 'PHP_AUTH_PW'   => 'azerty' ,
@@ -129,7 +128,7 @@ class SecurityControllerTest extends WebTestCase
     }
     public function testInscriptionUtilisateurk01()
     {
-        $token = new UsernamePasswordToken('admin', null, 'api', ['ROLE_Super_admin']);
+        
         $client = static::createClient([],[ 
                 'PHP_AUTH_USER' => 'Abdou' ,
                 'PHP_AUTH_PW'   => 'azerty' ,
@@ -153,7 +152,7 @@ class SecurityControllerTest extends WebTestCase
     }
     public function testInscriptionUtilisateurk02()
     {
-        $token = new UsernamePasswordToken('admin', null, 'api', ['ROLE_Super_admin']);
+        
         $client = static::createClient([],[ 
                 'PHP_AUTH_USER' => 'caissier1' ,
                 'PHP_AUTH_PW'   => 'azerty' ,
@@ -177,7 +176,7 @@ class SecurityControllerTest extends WebTestCase
     }
     public function testInscriptionUtilisateurk03()
     {
-        $token = new UsernamePasswordToken('admin', null, 'api', ['ROLE_Super_admin']);
+        
         $client = static::createClient([],[ 
                 'PHP_AUTH_USER' => 'Abdou' ,
                 'PHP_AUTH_PW'   => 'azerty' ,
@@ -201,7 +200,7 @@ class SecurityControllerTest extends WebTestCase
     }
     public function testInscriptionUtilisateurk04()
     {
-        $token = new UsernamePasswordToken('admin', null, 'api', ['ROLE_Super_admin']);
+        
         $client = static::createClient([],[ 
                 'PHP_AUTH_USER' => 'utilisateur1' ,
                 'PHP_AUTH_PW'   => 'azerty' ,
@@ -225,7 +224,7 @@ class SecurityControllerTest extends WebTestCase
     }
     public function testInscriptionUtilisateurk05()
     {
-        $token = new UsernamePasswordToken('admin', null, 'api', ['ROLE_Super_admin']);
+        
         $client = static::createClient([],[ 
                 'PHP_AUTH_USER' => 'caissier1' ,
                 'PHP_AUTH_PW'   => 'azerty' ,
@@ -249,7 +248,7 @@ class SecurityControllerTest extends WebTestCase
     }
     public function testInscriptionUtilisateurk06()
     {
-        $token = new UsernamePasswordToken('admin', null, 'api', ['ROLE_Super_admin']);
+        
         $client = static::createClient([],[ 
                 'PHP_AUTH_USER' => 'caissier1' ,
                 'PHP_AUTH_PW'   => 'azerty' ,

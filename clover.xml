@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1564473055">
-  <project timestamp="1564473055">
+<coverage generated="1564480023">
+  <project timestamp="1564480023">
     <package name="App\Controller">
       <file name="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/src/Controller/EntrepriseController.php">
         <class name="App\Controller\EntrepriseController" namespace="App\Controller">
