@@ -5,10 +5,9 @@ namespace App\Tests;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class SecurityControllerTest extends WebTestCase
-{
+{ 
     public function testInscriptionUtilisateurok1()
     {
-        
         $client = static::createClient([],[ 
                 'PHP_AUTH_USER' => 'Abdou' ,
                 'PHP_AUTH_PW'   => 'azerty'
@@ -271,3 +270,4 @@ class SecurityControllerTest extends WebTestCase
         $this->assertSame(409,$client->getResponse()->getStatusCode());
     }
 }
+ 
