@@ -57,20 +57,11 @@ class SecurityController extends AbstractFOSRestController
             ){
                 return $this->handleView($this->view(['impossible' => 'Votre profil ne vous permet pas de créer ce type d\'utilisateur'],Response::HTTP_CONFLICT));
             }
-            elseif($libelle==$libSupAdmi){//ajout super-admin
-                $user->setRoles(['ROLE_Super-admin']);  
-            }
-            elseif($libelle==$libCaissier){//ajout caissier
-                $user->setRoles(['ROLE_Caissier']); 
-            }
-            elseif($libelle==$libAdmiPrinc){//ajout admin-principal
-                $user->setRoles(['ROLE_admin-Principal']); 
-            }
-            elseif($libelle==$libAdmi){
-                $user->setRoles(['ROLE_admin']); 
-            }
-            elseif($libelle=='utilisateur'){
-                $user->setRoles(['ROLE_utilisateur']);
+            else{
+                $user->setRoles(['ROLE_'.$libelle]);
+                if($libelle!=$libAdmiPrinc){//car si c'est l'admin principal on devra recuperer l'id de l'entreprise qui est sur le formulaire
+                    $user->setEntreprise($Userconnecte->getEntreprise());//si ajout caissier il sera dans la même entreprise que le super-admin, si admin ou utilisateur il sera dans la même entreprise que l'admin-principal qui les a créé
+                }
             }
             $user->setStatus('Actif');
             $manager->persist($user);

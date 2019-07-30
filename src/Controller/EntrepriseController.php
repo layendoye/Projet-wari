@@ -22,7 +22,7 @@ use Doctrine\Common\Persistence\ObjectManager;
 class EntrepriseController extends AbstractController
 {
     /**
-     * @Route("/{id}", name="show_entreprise", methods={"GET"})
+     * @Route("/entreprise/{id}", name="show_entreprise", methods={"GET"})
     */
     public function show(Entreprise $entreprise, EntrepriseRepository $entrepriseRepository, SerializerInterface $serializer)
     {
@@ -40,7 +40,7 @@ class EntrepriseController extends AbstractController
      /**
      * @Route("/list/entreprises", name="list_entreprise", methods={"GET"})
      */
-    public function index(EntrepriseRepository $entrepriseRepository, SerializerInterface $serializer)
+    public function liste(EntrepriseRepository $entrepriseRepository, SerializerInterface $serializer)
     {
         $entreprises = $entrepriseRepository->findAll();
         $data = $serializer->serialize($entreprises, 'json',[
@@ -123,34 +123,33 @@ class EntrepriseController extends AbstractController
 
    
     /**
-     * @Route("/depot/entreprise")
-     */
+    * @Route("/depot/entreprise")
+    */
 
-     public function depot (Request $request, UserInterface $Userconnecte)
-     {
-         $depot = new Depot();
+    public function depot (Request $request, UserInterface $Userconnecte)
+    {
+        $depot = new Depot();
+        $form = $this->createForm(DepotType::class, $depot);
+        $data=json_decode($request->getContent(),true);
+        $form->submit($data);
 
-         $form = $this->createForm(DepotType::class, $depot);
-         $data=json_decode($request->getContent(),true);
-         $form->submit($data);
+        if($form->isSubmitted() && $form->isValid())
+        {
+           $depot->setDate(new \DateTime());
+           $depot->setCaissier($Userconnecte);
+           $entreprise=$depot->getEntreprise();
+           $entreprise->setSolde($entreprise->getSolde()+$depot->getMontant());
+           $manager=$this->getDoctrine()->getManager();
+           $manager->persist($entreprise);
+           $manager->persist($depot);
+           $manager->flush();
+           $data = [
+               'status' => 201,
+               'message' => 'Le depot a bien été effectué '
+           ];
+           return new JsonResponse($data, 201);
 
-         if($form->isSubmitted() && $form->isValid())
-         {
-            $depot->setDate(new \DateTime());
-            $depot->setCaissier($Userconnecte);
-            $entreprise=$depot->getEntreprise();
-            $entreprise->setSolde($entreprise->getSolde()+$depot->getMontant());
-            $manager=$this->getDoctrine()->getManager();
-            $manager->persist($entreprise);
-            $manager->persist($depot);
-            $manager->flush();
-            $data = [
-                'status' => 201,
-                'message' => 'Le depot a bien été effectué '
-            ];
-            return new JsonResponse($data, 201);
-
-         }
-         return new JsonResponse($this->view($form->getErrors()), 500);
-     }
+        }
+        return new JsonResponse($this->view($form->getErrors()), 500);
+    }
 }

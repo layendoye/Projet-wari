@@ -100,5 +100,48 @@ class AppFixtures extends Fixture
             }
             $manager->flush();
         }
+        //Pour les testes fonctionnels
+        $UserSimpl=new Utilisateur();
+        $UserSimpl->setUsername('utilisateur1')
+             ->setRoles(['ROLE_Utilisateur'])
+             ->setPassword($motDePass)
+             ->setConfirmPassword($motDePass)
+             ->setEntreprise($wari)
+             ->setNom('utilisateur1')
+             ->setEmail('utilisateur1@gmail.com')
+             ->setTelephone(rand(770000000,779999999))
+             ->setNci(strval(rand(150000000,979999999)))
+             ->setStatus($actif)
+             ->setProfil($profilUtil); 
+        $manager->persist($UserSimpl);
+
+        $UserCaissier=new Utilisateur();
+        $UserCaissier->setUsername('caissier1')
+             ->setRoles(['ROLE_Caissier'])
+             ->setPassword($motDePass)
+             ->setConfirmPassword($motDePass)
+             ->setEntreprise($wari)
+             ->setNom('caissier1')
+             ->setEmail('caissier1@gmail.com')
+             ->setTelephone(rand(770000000,779999999))
+             ->setNci(strval(rand(150000000,979999999)))
+             ->setStatus($actif)
+             ->setProfil($profilCaiss); 
+        $manager->persist($UserCaissier);
+
+        $UseradminPinci=new Utilisateur();
+        $UseradminPinci->setUsername('admPrincipale1')
+             ->setRoles(['ROLE_admin-Principal'])
+             ->setPassword($motDePass)
+             ->setConfirmPassword($motDePass)
+             ->setEntreprise($wari)
+             ->setNom('admPrincipale1')
+             ->setEmail('admPrincipale1@gmail.com')
+             ->setTelephone(rand(770000000,779999999))
+             ->setNci(strval(rand(150000000,979999999)))
+             ->setStatus($actif)
+             ->setProfil($profilAdP); 
+        $manager->persist($UseradminPinci);
+        $manager->flush();
     }
 }

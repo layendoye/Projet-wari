@@ -16,14 +16,14 @@ class SecurityControllerTest extends WebTestCase
             ]);
         $crawler = $client->request('POST', '/api/inscription',[],[],['CONTENT_TYPE'=>"application/json"],
             '{
-                "Nom":"Awa ciss",
-                "username": "awaciss3",
+                "Nom":"test1",
+                "username": "test1",
                 "password": "azerty",
                 "confirmPassword": "azerty",
                 "Entreprise": 3,
-                "Email":"evawa3@gmail.com",
-                "Telephone": 77854999,
-                "Nci":"1751 1500 074622",
+                "Email":"test1@gmail.com",
+                "Telephone": 7700001,
+                "Nci":"7700001",
                 "Profil": 2
             }'
         );
@@ -40,14 +40,14 @@ class SecurityControllerTest extends WebTestCase
             ]);
         $crawler = $client->request('POST', '/api/inscription',[],[],['CONTENT_TYPE'=>"application/json"],
             '{
-                "Nom":"Abdu",
-                "username": "abxx",
+                "Nom":"test2",
+                "username": "test2",
                 "password": "azerty",
                 "confirmPassword": "azerty",
                 "Entreprise": 3,
-                "Email":"abd8x@gmail.com",
-                "Telephone": 775543,
-                "Nci":"1751 1500 07",
+                "Email":"test2@gmail.com",
+                "Telephone": 7700002,
+                "Nci":"7700002",
                 "Profil": 1
             }'
         );
@@ -64,14 +64,14 @@ class SecurityControllerTest extends WebTestCase
             ]);
         $crawler = $client->request('POST', '/api/inscription',[],[],['CONTENT_TYPE'=>"application/json"],
             '{
-                "Nom":"A",
-                "username": "layy",
+                "Nom":"test3",
+                "username": "test3",
                 "password": "azerty",
                 "confirmPassword": "azerty",
                 "Entreprise": 3,
-                "Email":"abdy8@gmail.com",
-                "Telephone": 775541,
-                "Nci":"1751 15006 07",
+                "Email":"test3@gmail.com",
+                "Telephone": 7700003,
+                "Nci":"7700003",
                 "Profil": 3
             }'
         );
@@ -83,19 +83,19 @@ class SecurityControllerTest extends WebTestCase
     {
         $token = new UsernamePasswordToken('admin', null, 'api', ['ROLE_Super_admin']);
         $client = static::createClient([],[ 
-                'PHP_AUTH_USER' => 'awac' ,
+                'PHP_AUTH_USER' => 'admPrincipale1' ,
                 'PHP_AUTH_PW'   => 'azerty' ,
             ]);
         $crawler = $client->request('POST', '/api/inscription',[],[],['CONTENT_TYPE'=>"application/json"],
             '{
-                "Nom":"Az",
-                "username": "layye",
+                "Nom":"test4",
+                "username": "test4",
                 "password": "azerty",
                 "confirmPassword": "azerty",
                 "Entreprise": 3,
-                "Email":"abdyr82@gmail.com",
-                "Telephone": 775547412,
-                "Nci":"17510069907",
+                "Email":"test4@gmail.com",
+                "Telephone": 7700004,
+                "Nci":"7700004",
                 "Profil": 4
             }'
         );
@@ -107,19 +107,19 @@ class SecurityControllerTest extends WebTestCase
     {
         $token = new UsernamePasswordToken('admin', null, 'api', ['ROLE_Super_admin']);
         $client = static::createClient([],[ 
-                'PHP_AUTH_USER' => 'awac' ,
+                'PHP_AUTH_USER' => 'admPrincipale1' ,
                 'PHP_AUTH_PW'   => 'azerty' ,
             ]);
         $crawler = $client->request('POST', '/api/inscription',[],[],['CONTENT_TYPE'=>"application/json"],
             '{
-                "Nom":"Az",
-                "username": "laayye",
+                "Nom":"test5",
+                "username": "test5",
                 "password": "azerty",
                 "confirmPassword": "azerty",
                 "Entreprise": 3,
-                "Email":"abdy872@gmail.com",
-                "Telephone": 77570712,
-                "Nci":"17510607",
+                "Email":"test5@gmail.com",
+                "Telephone": 7700005,
+                "Nci":"7700005",
                 "Profil": 5
             }'
         );
@@ -136,14 +136,14 @@ class SecurityControllerTest extends WebTestCase
             ]);
         $crawler = $client->request('POST', '/api/inscription',[],[],['CONTENT_TYPE'=>"application/json"],
             '{
-                "Nom":"aaa",
-                "username": "qq",
+                "Nom":"test6",
+                "username": "test6",
                 "password": "azerty",
                 "confirmPassword": "azerty",
                 "Entreprise": 3,
-                "Email":"www@gmail.com",
-                "Telephone": 778544647,
-                "Nci":"17511500078546",
+                "Email":"test6@gmail.com",
+                "Telephone": 7700006,
+                "Nci":"7700006",
                 "Profil": 4
             }'
         );
@@ -155,19 +155,19 @@ class SecurityControllerTest extends WebTestCase
     {
         $token = new UsernamePasswordToken('admin', null, 'api', ['ROLE_Super_admin']);
         $client = static::createClient([],[ 
-                'PHP_AUTH_USER' => 'awaciss2' ,
+                'PHP_AUTH_USER' => 'caissier1' ,
                 'PHP_AUTH_PW'   => 'azerty' ,
             ]);
         $crawler = $client->request('POST', '/api/inscription',[],[],['CONTENT_TYPE'=>"application/json"],
             '{
-                "Nom":"aaooo",
-                "username": "sssoos7",
+                "Nom":"test7",
+                "username": "test7",
                 "password": "azerty",
                 "confirmPassword": "azerty",
                 "Entreprise": 3,
-                "Email":"wwwdos333@gmail.com",
+                "Email":"test7@gmail.com",
                 "Telephone": "ok",
-                "Nci":"175171856333",
+                "Nci":"7700007",
                 "Profil": 5
             }'
         );
@@ -184,14 +184,14 @@ class SecurityControllerTest extends WebTestCase
             ]);
         $crawler = $client->request('POST', '/api/inscription',[],[],['CONTENT_TYPE'=>"application/json"],
             '{
-                "Nom":"aaa2",
-                "username": "qq2",
+                "Nom":"test8",
+                "username": "test8",
                 "password": "azerty",
                 "confirmPassword": "azerty",
                 "Entreprise": 3,
-                "Email":"www2@gmail.com",
-                "Telephone": 778544642,
-                "Nci":"175115000785462",
+                "Email":"test8@gmail.com",
+                "Telephone": 7700008,
+                "Nci":"7700008",
                 "Profil": 5
             }'
         );
@@ -203,19 +203,19 @@ class SecurityControllerTest extends WebTestCase
     {
         $token = new UsernamePasswordToken('admin', null, 'api', ['ROLE_Super_admin']);
         $client = static::createClient([],[ 
-                'PHP_AUTH_USER' => 'qq3' ,
+                'PHP_AUTH_USER' => 'utilisateur1' ,
                 'PHP_AUTH_PW'   => 'azerty' ,
             ]);
         $crawler = $client->request('POST', '/api/inscription',[],[],['CONTENT_TYPE'=>"application/json"],
             '{
-                "Nom":"aaa3",
-                "username": "qq33",
+                "Nom":"test9",
+                "username": "test9",
                 "password": "azerty",
                 "confirmPassword": "azerty",
                 "Entreprise": 3,
-                "Email":"www333@gmail.com",
-                "Telephone": 7785446433,
-                "Nci":"17511500078546333",
+                "Email":"test9@gmail.com",
+                "Telephone": 7700009,
+                "Nci":"7700009",
                 "Profil": 1
             }'
         );
@@ -227,19 +227,19 @@ class SecurityControllerTest extends WebTestCase
     {
         $token = new UsernamePasswordToken('admin', null, 'api', ['ROLE_Super_admin']);
         $client = static::createClient([],[ 
-                'PHP_AUTH_USER' => 'awaciss2' ,
+                'PHP_AUTH_USER' => 'caissier1' ,
                 'PHP_AUTH_PW'   => 'azerty' ,
             ]);
         $crawler = $client->request('POST', '/api/inscription',[],[],['CONTENT_TYPE'=>"application/json"],
             '{
-                "Nom":"aaa3",
-                "username": "ss33",
+                "Nom":"test10",
+                "username": "test10",
                 "password": "azerty",
                 "confirmPassword": "azerty",
                 "Entreprise": 3,
-                "Email":"wwws333@gmail.com",
-                "Telephone": 77446433,
-                "Nci":"175178546333",
+                "Email":"test10@gmail.com",
+                "Telephone": 77000010,
+                "Nci":"77000010",
                 "Profil": 2
             }'
         );
@@ -251,19 +251,19 @@ class SecurityControllerTest extends WebTestCase
     {
         $token = new UsernamePasswordToken('admin', null, 'api', ['ROLE_Super_admin']);
         $client = static::createClient([],[ 
-                'PHP_AUTH_USER' => 'awaciss2' ,
+                'PHP_AUTH_USER' => 'caissier1' ,
                 'PHP_AUTH_PW'   => 'azerty' ,
             ]);
         $crawler = $client->request('POST', '/api/inscription',[],[],['CONTENT_TYPE'=>"application/json"],
             '{
-                "Nom":"aaa3",
-                "username": "ssss7",
+                "Nom":"test11",
+                "username": "test11",
                 "password": "azerty",
                 "confirmPassword": "azerty",
                 "Entreprise": 3,
-                "Email":"wwwds333@gmail.com",
-                "Telephone": 77456433,
-                "Nci":"17517856333",
+                "Email":"test11@gmail.com",
+                "Telephone": 77000011,
+                "Nci":"77000011",
                 "Profil": 3
             }'
         );
