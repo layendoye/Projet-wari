@@ -15,7 +15,7 @@ use Symfony\Component\Serializer\SerializerInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-
+use Doctrine\Common\Persistence\ObjectManager;
 /**
  * @Route("/api")
  */
@@ -35,21 +35,18 @@ class EntrepriseController extends AbstractController
         ]);
     }
 
+    
+
      /**
-     * @Route("/{page<\d+>?1}", name="list_entreprise", methods={"GET"})
+     * @Route("/list/entreprises", name="list_entreprise", methods={"GET"})
      */
-    public function index(Request $request, EntrepriseRepository $entrepriseRepository, SerializerInterface $serializer)
+    public function index(EntrepriseRepository $entrepriseRepository, SerializerInterface $serializer)
     {
-        $page = $request->query->get('page');
-        if(is_null($page) || $page < 1) {
-            $page = 1;
-        }
-        
-        $entreprises = $entrepriseRepository->findAllEntreprises($page,getenv('LIMIT'));
-        $data = $serializer->serialize($entreprises,'json',[
+        $entreprises = $entrepriseRepository->findAll();
+        $data = $serializer->serialize($entreprises, 'json',[
             'groups' => ['list']
         ]);
-    
+
         return new Response($data, 200, [
             'Content-Type' => 'application/json'
         ]);
@@ -101,10 +98,30 @@ class EntrepriseController extends AbstractController
             return new JsonResponse($data);
         }
 
-        
+    /**
+    * @Route("/bloque/entreprises/{id}", name="bloque_entreprise", methods={"PUT"})
+    */ 
+    public function bloque(Request $request, SerializerInterface $serializer, Entreprise $entreprise, ValidatorInterface $validator, EntityManagerInterface $entityManager, ObjectManager $manager)
+    {
+        if($entreprise->getStatus() == "Actif"){
+            $entreprise->setStatus("bloqué");
+            $reponse= new Response('Partenaire bloqué', 200, [
+                'Content-Type' => 'application/json'
+            ]);
+            
+        }
+        else{
+            $entreprise->setStatus("Actif");
+            $reponse= new Response('Partenaire débloqué', 200, [
+                'Content-Type' => 'application/json'
+            ]);
+        }
+        $manager->persist($entreprise);
+        $manager->flush();
+        return $reponse;
+    }
 
-
-    
+   
     /**
      * @Route("/depot/entreprise")
      */

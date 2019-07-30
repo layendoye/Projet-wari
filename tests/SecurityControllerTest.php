@@ -6,9 +6,9 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken;
 
 class SecurityControllerTest extends WebTestCase
-{
+{ 
     public function testInscriptionUtilisateurok1()
-    {
+    { 
         $token = new UsernamePasswordToken('admin', null, 'api', ['ROLE_Super_admin']);
         $client = static::createClient([],[ 
                 'PHP_AUTH_USER' => 'Abdou' ,
@@ -272,3 +272,4 @@ class SecurityControllerTest extends WebTestCase
         $this->assertSame(409,$client->getResponse()->getStatusCode());
     }
 }
+ 
