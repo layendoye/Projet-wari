@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="Project Test Suite" tests="12" assertions="12" errors="0" failures="0" skipped="0" time="25.921746">
-    <testsuite name="App\Tests\EntrepriseControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/EntrepriseControllerTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="3.847490">
-      <testcase name="testShow" class="App\Tests\EntrepriseControllerTest" classname="App.Tests.EntrepriseControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/EntrepriseControllerTest.php" line="11" assertions="1" time="3.847490"/>
+  <testsuite name="Project Test Suite" tests="12" assertions="12" errors="0" failures="0" skipped="0" time="25.987664">
+    <testsuite name="App\Tests\EntrepriseControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/EntrepriseControllerTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="4.034350">
+      <testcase name="testShow" class="App\Tests\EntrepriseControllerTest" classname="App.Tests.EntrepriseControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/EntrepriseControllerTest.php" line="11" assertions="1" time="4.034350"/>
     </testsuite>
-    <testsuite name="App\Tests\SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" tests="11" assertions="11" errors="0" failures="0" skipped="0" time="22.074256">
-      <testcase name="testInscriptionUtilisateurok1" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="9" assertions="1" time="2.864558">
+    <testsuite name="App\Tests\SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" tests="11" assertions="11" errors="0" failures="0" skipped="0" time="21.953314">
+      <testcase name="testInscriptionUtilisateurok1" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="9" assertions="1" time="2.620738">
         <system-out>/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php:29:
 class Symfony\Component\HttpFoundation\Response#2429 (6) {
   public $headers =&gt;
@@ -73,7 +73,7 @@ class Symfony\Component\HttpFoundation\Response#2429 (6) {
 }
 </system-out>
       </testcase>
-      <testcase name="testInscriptionUtilisateurok2" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="33" assertions="1" time="2.102084">
+      <testcase name="testInscriptionUtilisateurok2" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="33" assertions="1" time="2.152651">
         <system-out>/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php:53:
 class Symfony\Component\HttpFoundation\Response#2790 (6) {
   public $headers =&gt;
@@ -141,7 +141,7 @@ class Symfony\Component\HttpFoundation\Response#2790 (6) {
 }
 </system-out>
       </testcase>
-      <testcase name="testInscriptionUtilisateurok3" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="56" assertions="1" time="1.944818">
+      <testcase name="testInscriptionUtilisateurok3" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="56" assertions="1" time="1.958031">
         <system-out>/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php:77:
 class Symfony\Component\HttpFoundation\Response#5086 (6) {
   public $headers =&gt;
@@ -209,7 +209,7 @@ class Symfony\Component\HttpFoundation\Response#5086 (6) {
 }
 </system-out>
       </testcase>
-      <testcase name="testInscriptionUtilisateurok4" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="80" assertions="1" time="2.058119">
+      <testcase name="testInscriptionUtilisateurok4" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="80" assertions="1" time="2.010930">
         <system-out>/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php:101:
 class Symfony\Component\HttpFoundation\Response#1944 (6) {
   public $headers =&gt;
@@ -277,7 +277,7 @@ class Symfony\Component\HttpFoundation\Response#1944 (6) {
 }
 </system-out>
       </testcase>
-      <testcase name="testInscriptionUtilisateurok5" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="104" assertions="1" time="1.984881">
+      <testcase name="testInscriptionUtilisateurok5" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="104" assertions="1" time="2.077636">
         <system-out>/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php:125:
 class Symfony\Component\HttpFoundation\Response#3801 (6) {
   public $headers =&gt;
@@ -345,7 +345,7 @@ class Symfony\Component\HttpFoundation\Response#3801 (6) {
 }
 </system-out>
       </testcase>
-      <testcase name="testInscriptionUtilisateurk01" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="128" assertions="1" time="1.844822">
+      <testcase name="testInscriptionUtilisateurk01" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="128" assertions="1" time="1.839200">
         <system-out>/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php:149:
 class Symfony\Component\HttpFoundation\Response#743 (6) {
   public $headers =&gt;
@@ -413,7 +413,7 @@ class Symfony\Component\HttpFoundation\Response#743 (6) {
 }
 </system-out>
       </testcase>
-      <testcase name="testInscriptionUtilisateurk02" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="152" assertions="1" time="1.603742">
+      <testcase name="testInscriptionUtilisateurk02" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="152" assertions="1" time="1.616103">
         <system-out>/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php:173:
 class Symfony\Component\HttpFoundation\Response#1244 (6) {
   public $headers =&gt;
@@ -481,7 +481,7 @@ class Symfony\Component\HttpFoundation\Response#1244 (6) {
 }
 </system-out>
       </testcase>
-      <testcase name="testInscriptionUtilisateurk03" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="176" assertions="1" time="1.883855">
+      <testcase name="testInscriptionUtilisateurk03" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="176" assertions="1" time="2.006821">
         <system-out>/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php:197:
 class Symfony\Component\HttpFoundation\Response#2317 (6) {
   public $headers =&gt;
@@ -549,7 +549,7 @@ class Symfony\Component\HttpFoundation\Response#2317 (6) {
 }
 </system-out>
       </testcase>
-      <testcase name="testInscriptionUtilisateurk04" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="200" assertions="1" time="1.869940">
+      <testcase name="testInscriptionUtilisateurk04" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="200" assertions="1" time="1.842217">
         <system-out>/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php:221:
 class Symfony\Component\HttpFoundation\Response#1753 (6) {
   public $headers =&gt;
@@ -617,7 +617,7 @@ class Symfony\Component\HttpFoundation\Response#1753 (6) {
 }
 </system-out>
       </testcase>
-      <testcase name="testInscriptionUtilisateurk05" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="224" assertions="1" time="2.001939">
+      <testcase name="testInscriptionUtilisateurk05" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="224" assertions="1" time="1.889145">
         <system-out>/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php:245:
 class Symfony\Component\HttpFoundation\Response#1555 (6) {
   public $headers =&gt;
@@ -685,7 +685,7 @@ class Symfony\Component\HttpFoundation\Response#1555 (6) {
 }
 </system-out>
       </testcase>
-      <testcase name="testInscriptionUtilisateurk06" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="248" assertions="1" time="1.915499">
+      <testcase name="testInscriptionUtilisateurk06" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="248" assertions="1" time="1.939842">
         <system-out>/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php:269:
 class Symfony\Component\HttpFoundation\Response#9463 (6) {
   public $headers =&gt;

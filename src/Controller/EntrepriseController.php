@@ -103,7 +103,12 @@ class EntrepriseController extends AbstractController
     */ 
     public function bloque(Request $request, SerializerInterface $serializer, Entreprise $entreprise, ValidatorInterface $validator, EntityManagerInterface $entityManager, ObjectManager $manager)
     {
-        if($entreprise->getStatus() == "Actif"){
+        if($entreprise->getRaisonSociale()=='Wari'){
+            return new Response('Impossible de bloqué ce partenaire', 409, [
+                'Content-Type' => 'application/json'
+            ]);
+        }
+        elseif($entreprise->getStatus() == "Actif"){
             $entreprise->setStatus("bloqué");
             $reponse= new Response('Partenaire bloqué', 200, [
                 'Content-Type' => 'application/json'

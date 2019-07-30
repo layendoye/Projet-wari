@@ -18,7 +18,6 @@ class Entreprise
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
-     * @Groups({"list", "show"})
      */
     private $id;
 
@@ -54,13 +53,11 @@ class Entreprise
 
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\Utilisateur", mappedBy="Entreprise")
-     *  @Groups({"list", "show"})
      */
     private $utilisateurs;
 
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\Depot", mappedBy="Entreprise")
-     * @Groups({"list", "show"})
      */
     private $depots;
 
