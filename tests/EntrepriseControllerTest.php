@@ -9,8 +9,11 @@ use PHPUnit\Framework\Exception;
 class EntrepriseControllerTest extends WebTestCase
 {
     public function testShow(){
-        $client = static::createClient();
-        $client->request('GET', '/22');
+        $client = static::createClient([],[ 
+                'PHP_AUTH_USER' => 'Abdou' ,
+                'PHP_AUTH_PW'   => 'azerty'
+        ]);
+        $client->request('GET', 'api/entreprise/22');
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
 
     }

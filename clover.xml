@@ -1,66 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1564480023">
-  <project timestamp="1564480023">
+<coverage generated="1564484989">
+  <project timestamp="1564484989">
     <package name="App\Controller">
       <file name="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/src/Controller/EntrepriseController.php">
         <class name="App\Controller\EntrepriseController" namespace="App\Controller">
-          <metrics complexity="13" methods="5" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="49" coveredstatements="0" elements="54" coveredelements="0"/>
+          <metrics complexity="13" methods="6" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="56" coveredstatements="5" elements="62" coveredelements="6"/>
         </class>
-        <line num="27" type="method" name="show" visibility="public" complexity="1" crap="2" count="0"/>
-        <line num="29" type="stmt" count="0"/>
-        <line num="30" type="stmt" count="0"/>
-        <line num="31" type="stmt" count="0"/>
-        <line num="33" type="stmt" count="0"/>
-        <line num="34" type="stmt" count="0"/>
-        <line num="41" type="method" name="index" visibility="public" complexity="3" crap="12" count="0"/>
-        <line num="43" type="stmt" count="0"/>
-        <line num="44" type="stmt" count="0"/>
+        <line num="27" type="method" name="show" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="29" type="stmt" count="1"/>
+        <line num="30" type="stmt" count="1"/>
+        <line num="31" type="stmt" count="1"/>
+        <line num="33" type="stmt" count="1"/>
+        <line num="34" type="stmt" count="1"/>
+        <line num="43" type="method" name="liste" visibility="public" complexity="1" crap="2" count="0"/>
         <line num="45" type="stmt" count="0"/>
-        <line num="48" type="stmt" count="0"/>
-        <line num="49" type="stmt" count="0"/>
+        <line num="46" type="stmt" count="0"/>
+        <line num="47" type="stmt" count="0"/>
         <line num="50" type="stmt" count="0"/>
-        <line num="53" type="stmt" count="0"/>
-        <line num="54" type="stmt" count="0"/>
-        <line num="62" type="method" name="new" visibility="public" complexity="1" crap="2" count="0"/>
-        <line num="65" type="stmt" count="0"/>
+        <line num="51" type="stmt" count="0"/>
+        <line num="59" type="method" name="new" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="62" type="stmt" count="0"/>
+        <line num="63" type="stmt" count="0"/>
+        <line num="64" type="stmt" count="0"/>
         <line num="66" type="stmt" count="0"/>
-        <line num="67" type="stmt" count="0"/>
         <line num="69" type="stmt" count="0"/>
-        <line num="72" type="stmt" count="0"/>
-        <line num="78" type="method" name="update" visibility="public" complexity="5" crap="30" count="0"/>
+        <line num="75" type="method" name="update" visibility="public" complexity="5" crap="30" count="0"/>
+        <line num="77" type="stmt" count="0"/>
+        <line num="78" type="stmt" count="0"/>
+        <line num="79" type="stmt" count="0"/>
         <line num="80" type="stmt" count="0"/>
         <line num="81" type="stmt" count="0"/>
         <line num="82" type="stmt" count="0"/>
         <line num="83" type="stmt" count="0"/>
-        <line num="84" type="stmt" count="0"/>
-        <line num="85" type="stmt" count="0"/>
         <line num="86" type="stmt" count="0"/>
+        <line num="87" type="stmt" count="0"/>
+        <line num="88" type="stmt" count="0"/>
         <line num="89" type="stmt" count="0"/>
         <line num="90" type="stmt" count="0"/>
-        <line num="91" type="stmt" count="0"/>
-        <line num="92" type="stmt" count="0"/>
         <line num="93" type="stmt" count="0"/>
-        <line num="96" type="stmt" count="0"/>
+        <line num="95" type="stmt" count="0"/>
         <line num="98" type="stmt" count="0"/>
-        <line num="101" type="stmt" count="0"/>
-        <line num="108" type="method" name="depot" visibility="public" complexity="3" crap="12" count="0"/>
-        <line num="110" type="stmt" count="0"/>
-        <line num="111" type="stmt" count="0"/>
-        <line num="112" type="stmt" count="0"/>
-        <line num="113" type="stmt" count="0"/>
+        <line num="104" type="method" name="bloque" visibility="public" complexity="2" crap="6" count="0"/>
+        <line num="106" type="stmt" count="0"/>
+        <line num="107" type="stmt" count="0"/>
+        <line num="108" type="stmt" count="0"/>
+        <line num="109" type="stmt" count="0"/>
+        <line num="114" type="stmt" count="0"/>
         <line num="115" type="stmt" count="0"/>
-        <line num="117" type="stmt" count="0"/>
-        <line num="118" type="stmt" count="0"/>
+        <line num="116" type="stmt" count="0"/>
         <line num="119" type="stmt" count="0"/>
         <line num="120" type="stmt" count="0"/>
         <line num="121" type="stmt" count="0"/>
-        <line num="122" type="stmt" count="0"/>
-        <line num="123" type="stmt" count="0"/>
-        <line num="124" type="stmt" count="0"/>
-        <line num="126" type="stmt" count="0"/>
-        <line num="129" type="stmt" count="0"/>
+        <line num="129" type="method" name="depot" visibility="public" complexity="3" crap="12" count="0"/>
+        <line num="131" type="stmt" count="0"/>
         <line num="132" type="stmt" count="0"/>
-        <metrics loc="134" ncloc="115" classes="1" methods="5" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="49" coveredstatements="0" elements="54" coveredelements="0"/>
+        <line num="133" type="stmt" count="0"/>
+        <line num="134" type="stmt" count="0"/>
+        <line num="136" type="stmt" count="0"/>
+        <line num="138" type="stmt" count="0"/>
+        <line num="139" type="stmt" count="0"/>
+        <line num="140" type="stmt" count="0"/>
+        <line num="141" type="stmt" count="0"/>
+        <line num="142" type="stmt" count="0"/>
+        <line num="143" type="stmt" count="0"/>
+        <line num="144" type="stmt" count="0"/>
+        <line num="145" type="stmt" count="0"/>
+        <line num="147" type="stmt" count="0"/>
+        <line num="150" type="stmt" count="0"/>
+        <line num="153" type="stmt" count="0"/>
+        <metrics loc="155" ncloc="133" classes="1" methods="6" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="56" coveredstatements="5" elements="62" coveredelements="6"/>
       </file>
       <file name="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/src/Controller/SecurityController.php">
         <class name="App\Controller\SecurityController" namespace="App\Controller">
@@ -268,41 +276,41 @@
       </file>
       <file name="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/src/Entity/Entreprise.php">
         <class name="App\Entity\Entreprise" namespace="App\Entity">
-          <metrics complexity="33" methods="20" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="42" coveredstatements="0" elements="62" coveredelements="0"/>
+          <metrics complexity="33" methods="20" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="42" coveredstatements="8" elements="62" coveredelements="16"/>
         </class>
         <line num="72" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
         <line num="74" type="stmt" count="0"/>
         <line num="75" type="stmt" count="0"/>
         <line num="76" type="stmt" count="0"/>
-        <line num="78" type="method" name="getId" visibility="public" complexity="2" crap="6" count="0"/>
-        <line num="80" type="stmt" count="0"/>
-        <line num="83" type="method" name="getNumeroCompte" visibility="public" complexity="2" crap="6" count="0"/>
-        <line num="85" type="stmt" count="0"/>
+        <line num="78" type="method" name="getId" visibility="public" complexity="2" crap="2" count="1"/>
+        <line num="80" type="stmt" count="1"/>
+        <line num="83" type="method" name="getNumeroCompte" visibility="public" complexity="2" crap="2" count="1"/>
+        <line num="85" type="stmt" count="1"/>
         <line num="88" type="method" name="setNumeroCompte" visibility="public" complexity="1" crap="2" count="0"/>
         <line num="90" type="stmt" count="0"/>
         <line num="92" type="stmt" count="0"/>
-        <line num="95" type="method" name="getRaisonSociale" visibility="public" complexity="2" crap="6" count="0"/>
-        <line num="97" type="stmt" count="0"/>
+        <line num="95" type="method" name="getRaisonSociale" visibility="public" complexity="2" crap="2" count="1"/>
+        <line num="97" type="stmt" count="1"/>
         <line num="100" type="method" name="setRaisonSociale" visibility="public" complexity="1" crap="2" count="0"/>
         <line num="102" type="stmt" count="0"/>
         <line num="104" type="stmt" count="0"/>
-        <line num="107" type="method" name="getNinea" visibility="public" complexity="2" crap="6" count="0"/>
-        <line num="109" type="stmt" count="0"/>
+        <line num="107" type="method" name="getNinea" visibility="public" complexity="2" crap="2" count="1"/>
+        <line num="109" type="stmt" count="1"/>
         <line num="112" type="method" name="setNinea" visibility="public" complexity="1" crap="2" count="0"/>
         <line num="114" type="stmt" count="0"/>
         <line num="116" type="stmt" count="0"/>
-        <line num="119" type="method" name="getAdresse" visibility="public" complexity="2" crap="6" count="0"/>
-        <line num="121" type="stmt" count="0"/>
+        <line num="119" type="method" name="getAdresse" visibility="public" complexity="2" crap="2" count="1"/>
+        <line num="121" type="stmt" count="1"/>
         <line num="124" type="method" name="setAdresse" visibility="public" complexity="1" crap="2" count="0"/>
         <line num="126" type="stmt" count="0"/>
         <line num="128" type="stmt" count="0"/>
-        <line num="131" type="method" name="getSolde" visibility="public" complexity="2" crap="6" count="0"/>
-        <line num="133" type="stmt" count="0"/>
+        <line num="131" type="method" name="getSolde" visibility="public" complexity="2" crap="2" count="1"/>
+        <line num="133" type="stmt" count="1"/>
         <line num="136" type="method" name="setSolde" visibility="public" complexity="1" crap="2" count="0"/>
         <line num="138" type="stmt" count="0"/>
         <line num="140" type="stmt" count="0"/>
-        <line num="146" type="method" name="getUtilisateurs" visibility="public" complexity="1" crap="2" count="0"/>
-        <line num="148" type="stmt" count="0"/>
+        <line num="146" type="method" name="getUtilisateurs" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="148" type="stmt" count="1"/>
         <line num="151" type="method" name="addUtilisateur" visibility="public" complexity="2" crap="6" count="0"/>
         <line num="153" type="stmt" count="0"/>
         <line num="154" type="stmt" count="0"/>
@@ -314,8 +322,8 @@
         <line num="166" type="stmt" count="0"/>
         <line num="167" type="stmt" count="0"/>
         <line num="171" type="stmt" count="0"/>
-        <line num="177" type="method" name="getDepots" visibility="public" complexity="1" crap="2" count="0"/>
-        <line num="179" type="stmt" count="0"/>
+        <line num="177" type="method" name="getDepots" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="179" type="stmt" count="1"/>
         <line num="182" type="method" name="addDepot" visibility="public" complexity="2" crap="6" count="0"/>
         <line num="184" type="stmt" count="0"/>
         <line num="185" type="stmt" count="0"/>
@@ -332,7 +340,7 @@
         <line num="210" type="method" name="setStatus" visibility="public" complexity="1" crap="2" count="0"/>
         <line num="212" type="stmt" count="0"/>
         <line num="214" type="stmt" count="0"/>
-        <metrics loc="216" ncloc="165" classes="1" methods="20" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="42" coveredstatements="0" elements="62" coveredelements="0"/>
+        <metrics loc="216" ncloc="165" classes="1" methods="20" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="42" coveredstatements="8" elements="62" coveredelements="16"/>
       </file>
       <file name="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/src/Entity/Profil.php">
         <class name="App\Entity\Profil" namespace="App\Entity">
@@ -490,15 +498,15 @@
         <line num="117" type="method" name="setUsername" visibility="public" complexity="1" crap="1" count="11"/>
         <line num="119" type="stmt" count="11"/>
         <line num="121" type="stmt" count="11"/>
-        <line num="127" type="method" name="getRoles" visibility="public" complexity="1" crap="1" count="11"/>
-        <line num="129" type="stmt" count="11"/>
-        <line num="131" type="stmt" count="11"/>
-        <line num="133" type="stmt" count="11"/>
+        <line num="127" type="method" name="getRoles" visibility="public" complexity="1" crap="1" count="12"/>
+        <line num="129" type="stmt" count="12"/>
+        <line num="131" type="stmt" count="12"/>
+        <line num="133" type="stmt" count="12"/>
         <line num="136" type="method" name="setRoles" visibility="public" complexity="1" crap="1" count="5"/>
         <line num="138" type="stmt" count="5"/>
         <line num="140" type="stmt" count="5"/>
-        <line num="146" type="method" name="getPassword" visibility="public" complexity="1" crap="1" count="11"/>
-        <line num="148" type="stmt" count="11"/>
+        <line num="146" type="method" name="getPassword" visibility="public" complexity="1" crap="1" count="12"/>
+        <line num="148" type="stmt" count="12"/>
         <line num="151" type="method" name="setPassword" visibility="public" complexity="1" crap="1" count="11"/>
         <line num="153" type="stmt" count="11"/>
         <line num="155" type="stmt" count="11"/>
@@ -507,10 +515,10 @@
         <line num="163" type="method" name="setConfirmPassword" visibility="public" complexity="1" crap="1" count="11"/>
         <line num="165" type="stmt" count="11"/>
         <line num="167" type="stmt" count="11"/>
-        <line num="173" type="method" name="getSalt" visibility="public" complexity="1" crap="1" count="11"/>
-        <line num="176" type="stmt" count="11"/>
-        <line num="181" type="method" name="eraseCredentials" visibility="public" complexity="1" crap="1" count="11"/>
-        <line num="185" type="stmt" count="11"/>
+        <line num="173" type="method" name="getSalt" visibility="public" complexity="1" crap="1" count="12"/>
+        <line num="176" type="stmt" count="12"/>
+        <line num="181" type="method" name="eraseCredentials" visibility="public" complexity="1" crap="1" count="12"/>
+        <line num="185" type="stmt" count="12"/>
         <line num="187" type="method" name="getEntreprise" visibility="public" complexity="2" crap="2" count="11"/>
         <line num="189" type="stmt" count="11"/>
         <line num="192" type="method" name="setEntreprise" visibility="public" complexity="2" crap="2" count="11"/>
@@ -642,14 +650,14 @@
         <class name="App\Kernel" namespace="App">
           <metrics complexity="6" methods="4" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="6" elements="23" coveredelements="8"/>
         </class>
-        <line num="18" type="method" name="registerBundles" visibility="public" complexity="3" crap="3" count="11"/>
-        <line num="20" type="stmt" count="11"/>
-        <line num="21" type="stmt" count="11"/>
-        <line num="22" type="stmt" count="11"/>
-        <line num="23" type="stmt" count="11"/>
-        <line num="26" type="stmt" count="11"/>
-        <line num="28" type="method" name="getProjectDir" visibility="public" complexity="1" crap="1" count="11"/>
-        <line num="30" type="stmt" count="11"/>
+        <line num="18" type="method" name="registerBundles" visibility="public" complexity="3" crap="3" count="12"/>
+        <line num="20" type="stmt" count="12"/>
+        <line num="21" type="stmt" count="12"/>
+        <line num="22" type="stmt" count="12"/>
+        <line num="23" type="stmt" count="12"/>
+        <line num="26" type="stmt" count="12"/>
+        <line num="28" type="method" name="getProjectDir" visibility="public" complexity="1" crap="1" count="12"/>
+        <line num="30" type="stmt" count="12"/>
         <line num="33" type="method" name="configureContainer" visibility="protected" complexity="1" crap="2" count="0"/>
         <line num="35" type="stmt" count="0"/>
         <line num="36" type="stmt" count="0"/>
@@ -720,9 +728,9 @@
         <class name="App\Repository\EntrepriseRepository" namespace="App\Repository">
           <metrics complexity="2" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="2" elements="9" coveredelements="3"/>
         </class>
-        <line num="18" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="11"/>
-        <line num="20" type="stmt" count="11"/>
-        <line num="21" type="stmt" count="11"/>
+        <line num="18" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="12"/>
+        <line num="20" type="stmt" count="12"/>
+        <line num="21" type="stmt" count="12"/>
         <line num="51" type="method" name="findAllEntreprises" visibility="public" complexity="1" crap="2" count="0"/>
         <line num="53" type="stmt" count="0"/>
         <line num="54" type="stmt" count="0"/>
@@ -753,12 +761,12 @@
         <class name="App\Repository\UtilisateurRepository" namespace="App\Repository">
           <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
         </class>
-        <line num="17" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="11"/>
-        <line num="19" type="stmt" count="11"/>
-        <line num="20" type="stmt" count="11"/>
+        <line num="17" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="12"/>
+        <line num="19" type="stmt" count="12"/>
+        <line num="20" type="stmt" count="12"/>
         <metrics loc="60" ncloc="13" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
       </file>
     </package>
-    <metrics files="20" loc="1991" ncloc="1467" classes="20" methods="136" coveredmethods="33" conditionals="0" coveredconditionals="0" statements="486" coveredstatements="94" elements="622" coveredelements="127"/>
+    <metrics files="20" loc="2012" ncloc="1485" classes="20" methods="137" coveredmethods="42" conditionals="0" coveredconditionals="0" statements="493" coveredstatements="107" elements="630" coveredelements="149"/>
   </project>
 </coverage>

@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="Project Test Suite" tests="11" assertions="11" errors="0" failures="0" skipped="0" time="16.897544">
-    <testsuite name="App\Tests\SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" tests="11" assertions="11" errors="0" failures="0" skipped="0" time="16.897544">
-      <testcase name="testInscriptionUtilisateurok1" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="9" assertions="1" time="2.055740">
-        <system-out>/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php:30:
-class Symfony\Component\HttpFoundation\Response#631 (6) {
+  <testsuite name="Project Test Suite" tests="12" assertions="12" errors="0" failures="0" skipped="0" time="25.921746">
+    <testsuite name="App\Tests\EntrepriseControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/EntrepriseControllerTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="3.847490">
+      <testcase name="testShow" class="App\Tests\EntrepriseControllerTest" classname="App.Tests.EntrepriseControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/EntrepriseControllerTest.php" line="11" assertions="1" time="3.847490"/>
+    </testsuite>
+    <testsuite name="App\Tests\SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" tests="11" assertions="11" errors="0" failures="0" skipped="0" time="22.074256">
+      <testcase name="testInscriptionUtilisateurok1" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="9" assertions="1" time="2.864558">
+        <system-out>/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php:29:
+class Symfony\Component\HttpFoundation\Response#2429 (6) {
   public $headers =&gt;
-  class Symfony\Component\HttpFoundation\ResponseHeaderBag#616 (5) {
+  class Symfony\Component\HttpFoundation\ResponseHeaderBag#2414 (5) {
     protected $computedCacheControl =&gt;
     array(2) {
       'no-cache' =&gt;
@@ -70,11 +73,11 @@ class Symfony\Component\HttpFoundation\Response#631 (6) {
 }
 </system-out>
       </testcase>
-      <testcase name="testInscriptionUtilisateurok2" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="34" assertions="1" time="1.553508">
-        <system-out>/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php:54:
-class Symfony\Component\HttpFoundation\Response#2598 (6) {
+      <testcase name="testInscriptionUtilisateurok2" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="33" assertions="1" time="2.102084">
+        <system-out>/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php:53:
+class Symfony\Component\HttpFoundation\Response#2790 (6) {
   public $headers =&gt;
-  class Symfony\Component\HttpFoundation\ResponseHeaderBag#2597 (5) {
+  class Symfony\Component\HttpFoundation\ResponseHeaderBag#2789 (5) {
     protected $computedCacheControl =&gt;
     array(2) {
       'no-cache' =&gt;
@@ -138,11 +141,11 @@ class Symfony\Component\HttpFoundation\Response#2598 (6) {
 }
 </system-out>
       </testcase>
-      <testcase name="testInscriptionUtilisateurok3" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="57" assertions="1" time="1.619012">
-        <system-out>/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php:78:
-class Symfony\Component\HttpFoundation\Response#4789 (6) {
+      <testcase name="testInscriptionUtilisateurok3" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="56" assertions="1" time="1.944818">
+        <system-out>/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php:77:
+class Symfony\Component\HttpFoundation\Response#5086 (6) {
   public $headers =&gt;
-  class Symfony\Component\HttpFoundation\ResponseHeaderBag#4788 (5) {
+  class Symfony\Component\HttpFoundation\ResponseHeaderBag#5085 (5) {
     protected $computedCacheControl =&gt;
     array(2) {
       'no-cache' =&gt;
@@ -206,11 +209,11 @@ class Symfony\Component\HttpFoundation\Response#4789 (6) {
 }
 </system-out>
       </testcase>
-      <testcase name="testInscriptionUtilisateurok4" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="81" assertions="1" time="1.550498">
-        <system-out>/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php:102:
-class Symfony\Component\HttpFoundation\Response#4937 (6) {
+      <testcase name="testInscriptionUtilisateurok4" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="80" assertions="1" time="2.058119">
+        <system-out>/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php:101:
+class Symfony\Component\HttpFoundation\Response#1944 (6) {
   public $headers =&gt;
-  class Symfony\Component\HttpFoundation\ResponseHeaderBag#4936 (5) {
+  class Symfony\Component\HttpFoundation\ResponseHeaderBag#1968 (5) {
     protected $computedCacheControl =&gt;
     array(2) {
       'no-cache' =&gt;
@@ -274,11 +277,11 @@ class Symfony\Component\HttpFoundation\Response#4937 (6) {
 }
 </system-out>
       </testcase>
-      <testcase name="testInscriptionUtilisateurok5" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="105" assertions="1" time="1.801415">
-        <system-out>/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php:126:
-class Symfony\Component\HttpFoundation\Response#3488 (6) {
+      <testcase name="testInscriptionUtilisateurok5" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="104" assertions="1" time="1.984881">
+        <system-out>/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php:125:
+class Symfony\Component\HttpFoundation\Response#3801 (6) {
   public $headers =&gt;
-  class Symfony\Component\HttpFoundation\ResponseHeaderBag#3452 (5) {
+  class Symfony\Component\HttpFoundation\ResponseHeaderBag#3797 (5) {
     protected $computedCacheControl =&gt;
     array(2) {
       'no-cache' =&gt;
@@ -342,11 +345,11 @@ class Symfony\Component\HttpFoundation\Response#3488 (6) {
 }
 </system-out>
       </testcase>
-      <testcase name="testInscriptionUtilisateurk01" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="129" assertions="1" time="1.445133">
-        <system-out>/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php:150:
-class Symfony\Component\HttpFoundation\Response#886 (6) {
+      <testcase name="testInscriptionUtilisateurk01" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="128" assertions="1" time="1.844822">
+        <system-out>/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php:149:
+class Symfony\Component\HttpFoundation\Response#743 (6) {
   public $headers =&gt;
-  class Symfony\Component\HttpFoundation\ResponseHeaderBag#884 (5) {
+  class Symfony\Component\HttpFoundation\ResponseHeaderBag#744 (5) {
     protected $computedCacheControl =&gt;
     array(2) {
       'no-cache' =&gt;
@@ -410,11 +413,11 @@ class Symfony\Component\HttpFoundation\Response#886 (6) {
 }
 </system-out>
       </testcase>
-      <testcase name="testInscriptionUtilisateurk02" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="153" assertions="1" time="1.169208">
-        <system-out>/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php:174:
-class Symfony\Component\HttpFoundation\Response#4485 (6) {
+      <testcase name="testInscriptionUtilisateurk02" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="152" assertions="1" time="1.603742">
+        <system-out>/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php:173:
+class Symfony\Component\HttpFoundation\Response#1244 (6) {
   public $headers =&gt;
-  class Symfony\Component\HttpFoundation\ResponseHeaderBag#4684 (5) {
+  class Symfony\Component\HttpFoundation\ResponseHeaderBag#902 (5) {
     protected $computedCacheControl =&gt;
     array(2) {
       'no-cache' =&gt;
@@ -478,11 +481,11 @@ class Symfony\Component\HttpFoundation\Response#4485 (6) {
 }
 </system-out>
       </testcase>
-      <testcase name="testInscriptionUtilisateurk03" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="177" assertions="1" time="1.496501">
-        <system-out>/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php:198:
-class Symfony\Component\HttpFoundation\Response#5526 (6) {
+      <testcase name="testInscriptionUtilisateurk03" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="176" assertions="1" time="1.883855">
+        <system-out>/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php:197:
+class Symfony\Component\HttpFoundation\Response#2317 (6) {
   public $headers =&gt;
-  class Symfony\Component\HttpFoundation\ResponseHeaderBag#5525 (5) {
+  class Symfony\Component\HttpFoundation\ResponseHeaderBag#4423 (5) {
     protected $computedCacheControl =&gt;
     array(2) {
       'no-cache' =&gt;
@@ -546,11 +549,11 @@ class Symfony\Component\HttpFoundation\Response#5526 (6) {
 }
 </system-out>
       </testcase>
-      <testcase name="testInscriptionUtilisateurk04" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="201" assertions="1" time="1.412097">
-        <system-out>/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php:222:
-class Symfony\Component\HttpFoundation\Response#4346 (6) {
+      <testcase name="testInscriptionUtilisateurk04" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="200" assertions="1" time="1.869940">
+        <system-out>/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php:221:
+class Symfony\Component\HttpFoundation\Response#1753 (6) {
   public $headers =&gt;
-  class Symfony\Component\HttpFoundation\ResponseHeaderBag#4340 (5) {
+  class Symfony\Component\HttpFoundation\ResponseHeaderBag#2049 (5) {
     protected $computedCacheControl =&gt;
     array(2) {
       'no-cache' =&gt;
@@ -614,11 +617,11 @@ class Symfony\Component\HttpFoundation\Response#4346 (6) {
 }
 </system-out>
       </testcase>
-      <testcase name="testInscriptionUtilisateurk05" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="225" assertions="1" time="1.390370">
-        <system-out>/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php:246:
-class Symfony\Component\HttpFoundation\Response#2095 (6) {
+      <testcase name="testInscriptionUtilisateurk05" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="224" assertions="1" time="2.001939">
+        <system-out>/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php:245:
+class Symfony\Component\HttpFoundation\Response#1555 (6) {
   public $headers =&gt;
-  class Symfony\Component\HttpFoundation\ResponseHeaderBag#3696 (5) {
+  class Symfony\Component\HttpFoundation\ResponseHeaderBag#798 (5) {
     protected $computedCacheControl =&gt;
     array(2) {
       'no-cache' =&gt;
@@ -682,11 +685,11 @@ class Symfony\Component\HttpFoundation\Response#2095 (6) {
 }
 </system-out>
       </testcase>
-      <testcase name="testInscriptionUtilisateurk06" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="249" assertions="1" time="1.404062">
-        <system-out>/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php:270:
-class Symfony\Component\HttpFoundation\Response#3975 (6) {
+      <testcase name="testInscriptionUtilisateurk06" class="App\Tests\SecurityControllerTest" classname="App.Tests.SecurityControllerTest" file="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php" line="248" assertions="1" time="1.915499">
+        <system-out>/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/tests/SecurityControllerTest.php:269:
+class Symfony\Component\HttpFoundation\Response#9463 (6) {
   public $headers =&gt;
-  class Symfony\Component\HttpFoundation\ResponseHeaderBag#4029 (5) {
+  class Symfony\Component\HttpFoundation\ResponseHeaderBag#9444 (5) {
     protected $computedCacheControl =&gt;
     array(2) {
       'no-cache' =&gt;
