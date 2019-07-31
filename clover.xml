@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1564485589">
-  <project timestamp="1564485589">
+<coverage generated="1564572184">
+  <project timestamp="1564572184">
     <package name="App\Controller">
-      <file name="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/src/Controller/EntrepriseController.php">
+      <file name="/home/jean/Projet-wari/src/Controller/EntrepriseController.php">
         <class name="App\Controller\EntrepriseController" namespace="App\Controller">
-          <metrics complexity="13" methods="6" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="56" coveredstatements="5" elements="62" coveredelements="6"/>
+          <metrics complexity="14" methods="6" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="59" coveredstatements="20" elements="65" coveredelements="21"/>
         </class>
         <line num="27" type="method" name="show" visibility="public" complexity="1" crap="1" count="1"/>
         <line num="29" type="stmt" count="1"/>
@@ -40,37 +40,40 @@
         <line num="93" type="stmt" count="0"/>
         <line num="95" type="stmt" count="0"/>
         <line num="98" type="stmt" count="0"/>
-        <line num="104" type="method" name="bloque" visibility="public" complexity="2" crap="6" count="0"/>
+        <line num="104" type="method" name="bloque" visibility="public" complexity="3" crap="12" count="0"/>
         <line num="106" type="stmt" count="0"/>
         <line num="107" type="stmt" count="0"/>
         <line num="108" type="stmt" count="0"/>
-        <line num="109" type="stmt" count="0"/>
+        <line num="111" type="stmt" count="0"/>
+        <line num="112" type="stmt" count="0"/>
+        <line num="113" type="stmt" count="0"/>
         <line num="114" type="stmt" count="0"/>
-        <line num="115" type="stmt" count="0"/>
-        <line num="116" type="stmt" count="0"/>
         <line num="119" type="stmt" count="0"/>
         <line num="120" type="stmt" count="0"/>
         <line num="121" type="stmt" count="0"/>
-        <line num="129" type="method" name="depot" visibility="public" complexity="3" crap="12" count="0"/>
-        <line num="131" type="stmt" count="0"/>
-        <line num="132" type="stmt" count="0"/>
-        <line num="133" type="stmt" count="0"/>
-        <line num="134" type="stmt" count="0"/>
-        <line num="136" type="stmt" count="0"/>
-        <line num="138" type="stmt" count="0"/>
-        <line num="139" type="stmt" count="0"/>
-        <line num="140" type="stmt" count="0"/>
-        <line num="141" type="stmt" count="0"/>
-        <line num="142" type="stmt" count="0"/>
-        <line num="143" type="stmt" count="0"/>
-        <line num="144" type="stmt" count="0"/>
-        <line num="145" type="stmt" count="0"/>
-        <line num="147" type="stmt" count="0"/>
-        <line num="150" type="stmt" count="0"/>
-        <line num="153" type="stmt" count="0"/>
-        <metrics loc="155" ncloc="133" classes="1" methods="6" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="56" coveredstatements="5" elements="62" coveredelements="6"/>
+        <line num="124" type="stmt" count="0"/>
+        <line num="125" type="stmt" count="0"/>
+        <line num="126" type="stmt" count="0"/>
+        <line num="134" type="method" name="depot" visibility="public" complexity="3" crap="3.00" count="1"/>
+        <line num="136" type="stmt" count="1"/>
+        <line num="137" type="stmt" count="1"/>
+        <line num="138" type="stmt" count="1"/>
+        <line num="139" type="stmt" count="1"/>
+        <line num="141" type="stmt" count="1"/>
+        <line num="143" type="stmt" count="1"/>
+        <line num="144" type="stmt" count="1"/>
+        <line num="145" type="stmt" count="1"/>
+        <line num="146" type="stmt" count="1"/>
+        <line num="147" type="stmt" count="1"/>
+        <line num="148" type="stmt" count="1"/>
+        <line num="149" type="stmt" count="1"/>
+        <line num="150" type="stmt" count="1"/>
+        <line num="152" type="stmt" count="1"/>
+        <line num="155" type="stmt" count="1"/>
+        <line num="158" type="stmt" count="0"/>
+        <metrics loc="160" ncloc="138" classes="1" methods="6" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="59" coveredstatements="20" elements="65" coveredelements="21"/>
       </file>
-      <file name="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/src/Controller/SecurityController.php">
+      <file name="/home/jean/Projet-wari/src/Controller/SecurityController.php">
         <class name="App\Controller\SecurityController" namespace="App\Controller">
           <metrics complexity="15" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="28" coveredstatements="28" elements="29" coveredelements="29"/>
         </class>
@@ -105,7 +108,7 @@
         <line num="71" type="stmt" count="1"/>
         <metrics loc="91" ncloc="53" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="28" coveredstatements="28" elements="29" coveredelements="29"/>
       </file>
-      <file name="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/src/Controller/TransactionController.php">
+      <file name="/home/jean/Projet-wari/src/Controller/TransactionController.php">
         <class name="App\Controller\TransactionController" namespace="App\Controller">
           <metrics complexity="3" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="0" elements="14" coveredelements="0"/>
         </class>
@@ -127,7 +130,7 @@
       </file>
     </package>
     <package name="App\DataFixtures">
-      <file name="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/src/DataFixtures/AppFixtures.php">
+      <file name="/home/jean/Projet-wari/src/DataFixtures/AppFixtures.php">
         <class name="App\DataFixtures\AppFixtures" namespace="App\DataFixtures">
           <metrics complexity="6" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="110" coveredstatements="0" elements="111" coveredelements="0"/>
         </class>
@@ -246,103 +249,103 @@
       </file>
     </package>
     <package name="App\Entity">
-      <file name="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/src/Entity/Depot.php">
+      <file name="/home/jean/Projet-wari/src/Entity/Depot.php">
         <class name="App\Entity\Depot" namespace="App\Entity">
-          <metrics complexity="16" methods="9" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="0" elements="22" coveredelements="0"/>
+          <metrics complexity="16" methods="9" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="10" elements="22" coveredelements="16"/>
         </class>
         <line num="43" type="method" name="getId" visibility="public" complexity="2" crap="6" count="0"/>
         <line num="45" type="stmt" count="0"/>
-        <line num="48" type="method" name="getEntreprise" visibility="public" complexity="2" crap="6" count="0"/>
-        <line num="50" type="stmt" count="0"/>
-        <line num="53" type="method" name="setEntreprise" visibility="public" complexity="2" crap="6" count="0"/>
-        <line num="55" type="stmt" count="0"/>
-        <line num="57" type="stmt" count="0"/>
+        <line num="48" type="method" name="getEntreprise" visibility="public" complexity="2" crap="2" count="1"/>
+        <line num="50" type="stmt" count="1"/>
+        <line num="53" type="method" name="setEntreprise" visibility="public" complexity="2" crap="2" count="1"/>
+        <line num="55" type="stmt" count="1"/>
+        <line num="57" type="stmt" count="1"/>
         <line num="60" type="method" name="getDate" visibility="public" complexity="2" crap="6" count="0"/>
         <line num="62" type="stmt" count="0"/>
-        <line num="65" type="method" name="setDate" visibility="public" complexity="1" crap="2" count="0"/>
-        <line num="67" type="stmt" count="0"/>
-        <line num="69" type="stmt" count="0"/>
-        <line num="72" type="method" name="getMontant" visibility="public" complexity="2" crap="6" count="0"/>
-        <line num="74" type="stmt" count="0"/>
-        <line num="77" type="method" name="setMontant" visibility="public" complexity="1" crap="2" count="0"/>
-        <line num="79" type="stmt" count="0"/>
-        <line num="81" type="stmt" count="0"/>
+        <line num="65" type="method" name="setDate" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="67" type="stmt" count="1"/>
+        <line num="69" type="stmt" count="1"/>
+        <line num="72" type="method" name="getMontant" visibility="public" complexity="2" crap="2" count="1"/>
+        <line num="74" type="stmt" count="1"/>
+        <line num="77" type="method" name="setMontant" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="79" type="stmt" count="1"/>
+        <line num="81" type="stmt" count="1"/>
         <line num="84" type="method" name="getCaissier" visibility="public" complexity="2" crap="6" count="0"/>
         <line num="86" type="stmt" count="0"/>
-        <line num="89" type="method" name="setCaissier" visibility="public" complexity="2" crap="6" count="0"/>
-        <line num="91" type="stmt" count="0"/>
-        <line num="93" type="stmt" count="0"/>
-        <metrics loc="95" ncloc="72" classes="1" methods="9" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="0" elements="22" coveredelements="0"/>
+        <line num="89" type="method" name="setCaissier" visibility="public" complexity="2" crap="2" count="1"/>
+        <line num="91" type="stmt" count="1"/>
+        <line num="93" type="stmt" count="1"/>
+        <metrics loc="95" ncloc="72" classes="1" methods="9" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="10" elements="22" coveredelements="16"/>
       </file>
-      <file name="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/src/Entity/Entreprise.php">
+      <file name="/home/jean/Projet-wari/src/Entity/Entreprise.php">
         <class name="App\Entity\Entreprise" namespace="App\Entity">
-          <metrics complexity="33" methods="20" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="42" coveredstatements="8" elements="62" coveredelements="16"/>
+          <metrics complexity="33" methods="20" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="42" coveredstatements="8" elements="62" coveredelements="15"/>
         </class>
-        <line num="72" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
-        <line num="74" type="stmt" count="0"/>
-        <line num="75" type="stmt" count="0"/>
-        <line num="76" type="stmt" count="0"/>
-        <line num="78" type="method" name="getId" visibility="public" complexity="2" crap="2" count="1"/>
-        <line num="80" type="stmt" count="1"/>
-        <line num="83" type="method" name="getNumeroCompte" visibility="public" complexity="2" crap="2" count="1"/>
-        <line num="85" type="stmt" count="1"/>
-        <line num="88" type="method" name="setNumeroCompte" visibility="public" complexity="1" crap="2" count="0"/>
-        <line num="90" type="stmt" count="0"/>
-        <line num="92" type="stmt" count="0"/>
-        <line num="95" type="method" name="getRaisonSociale" visibility="public" complexity="2" crap="2" count="1"/>
-        <line num="97" type="stmt" count="1"/>
-        <line num="100" type="method" name="setRaisonSociale" visibility="public" complexity="1" crap="2" count="0"/>
-        <line num="102" type="stmt" count="0"/>
-        <line num="104" type="stmt" count="0"/>
-        <line num="107" type="method" name="getNinea" visibility="public" complexity="2" crap="2" count="1"/>
-        <line num="109" type="stmt" count="1"/>
-        <line num="112" type="method" name="setNinea" visibility="public" complexity="1" crap="2" count="0"/>
-        <line num="114" type="stmt" count="0"/>
-        <line num="116" type="stmt" count="0"/>
-        <line num="119" type="method" name="getAdresse" visibility="public" complexity="2" crap="2" count="1"/>
-        <line num="121" type="stmt" count="1"/>
-        <line num="124" type="method" name="setAdresse" visibility="public" complexity="1" crap="2" count="0"/>
-        <line num="126" type="stmt" count="0"/>
-        <line num="128" type="stmt" count="0"/>
-        <line num="131" type="method" name="getSolde" visibility="public" complexity="2" crap="2" count="1"/>
-        <line num="133" type="stmt" count="1"/>
-        <line num="136" type="method" name="setSolde" visibility="public" complexity="1" crap="2" count="0"/>
-        <line num="138" type="stmt" count="0"/>
-        <line num="140" type="stmt" count="0"/>
-        <line num="146" type="method" name="getUtilisateurs" visibility="public" complexity="1" crap="1" count="1"/>
-        <line num="148" type="stmt" count="1"/>
-        <line num="151" type="method" name="addUtilisateur" visibility="public" complexity="2" crap="6" count="0"/>
-        <line num="153" type="stmt" count="0"/>
-        <line num="154" type="stmt" count="0"/>
+        <line num="69" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="71" type="stmt" count="0"/>
+        <line num="72" type="stmt" count="0"/>
+        <line num="73" type="stmt" count="0"/>
+        <line num="75" type="method" name="getId" visibility="public" complexity="2" crap="2" count="1"/>
+        <line num="77" type="stmt" count="1"/>
+        <line num="80" type="method" name="getNumeroCompte" visibility="public" complexity="2" crap="2" count="1"/>
+        <line num="82" type="stmt" count="1"/>
+        <line num="85" type="method" name="setNumeroCompte" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="87" type="stmt" count="0"/>
+        <line num="89" type="stmt" count="0"/>
+        <line num="92" type="method" name="getRaisonSociale" visibility="public" complexity="2" crap="2" count="1"/>
+        <line num="94" type="stmt" count="1"/>
+        <line num="97" type="method" name="setRaisonSociale" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="99" type="stmt" count="0"/>
+        <line num="101" type="stmt" count="0"/>
+        <line num="104" type="method" name="getNinea" visibility="public" complexity="2" crap="2" count="1"/>
+        <line num="106" type="stmt" count="1"/>
+        <line num="109" type="method" name="setNinea" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="111" type="stmt" count="0"/>
+        <line num="113" type="stmt" count="0"/>
+        <line num="116" type="method" name="getAdresse" visibility="public" complexity="2" crap="2" count="1"/>
+        <line num="118" type="stmt" count="1"/>
+        <line num="121" type="method" name="setAdresse" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="123" type="stmt" count="0"/>
+        <line num="125" type="stmt" count="0"/>
+        <line num="128" type="method" name="getSolde" visibility="public" complexity="2" crap="2" count="2"/>
+        <line num="130" type="stmt" count="2"/>
+        <line num="133" type="method" name="setSolde" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="135" type="stmt" count="1"/>
+        <line num="137" type="stmt" count="1"/>
+        <line num="143" type="method" name="getUtilisateurs" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="145" type="stmt" count="0"/>
+        <line num="148" type="method" name="addUtilisateur" visibility="public" complexity="2" crap="6" count="0"/>
+        <line num="150" type="stmt" count="0"/>
+        <line num="151" type="stmt" count="0"/>
+        <line num="152" type="stmt" count="0"/>
         <line num="155" type="stmt" count="0"/>
-        <line num="158" type="stmt" count="0"/>
-        <line num="161" type="method" name="removeUtilisateur" visibility="public" complexity="3" crap="12" count="0"/>
+        <line num="158" type="method" name="removeUtilisateur" visibility="public" complexity="3" crap="12" count="0"/>
+        <line num="160" type="stmt" count="0"/>
+        <line num="161" type="stmt" count="0"/>
         <line num="163" type="stmt" count="0"/>
         <line num="164" type="stmt" count="0"/>
-        <line num="166" type="stmt" count="0"/>
-        <line num="167" type="stmt" count="0"/>
-        <line num="171" type="stmt" count="0"/>
-        <line num="177" type="method" name="getDepots" visibility="public" complexity="1" crap="1" count="1"/>
-        <line num="179" type="stmt" count="1"/>
-        <line num="182" type="method" name="addDepot" visibility="public" complexity="2" crap="6" count="0"/>
-        <line num="184" type="stmt" count="0"/>
-        <line num="185" type="stmt" count="0"/>
+        <line num="168" type="stmt" count="0"/>
+        <line num="174" type="method" name="getDepots" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="176" type="stmt" count="0"/>
+        <line num="179" type="method" name="addDepot" visibility="public" complexity="2" crap="6" count="0"/>
+        <line num="181" type="stmt" count="0"/>
+        <line num="182" type="stmt" count="0"/>
+        <line num="183" type="stmt" count="0"/>
         <line num="186" type="stmt" count="0"/>
-        <line num="189" type="stmt" count="0"/>
-        <line num="192" type="method" name="removeDepot" visibility="public" complexity="3" crap="12" count="0"/>
+        <line num="189" type="method" name="removeDepot" visibility="public" complexity="3" crap="12" count="0"/>
+        <line num="191" type="stmt" count="0"/>
+        <line num="192" type="stmt" count="0"/>
         <line num="194" type="stmt" count="0"/>
         <line num="195" type="stmt" count="0"/>
-        <line num="197" type="stmt" count="0"/>
-        <line num="198" type="stmt" count="0"/>
-        <line num="202" type="stmt" count="0"/>
-        <line num="205" type="method" name="getStatus" visibility="public" complexity="2" crap="6" count="0"/>
-        <line num="207" type="stmt" count="0"/>
-        <line num="210" type="method" name="setStatus" visibility="public" complexity="1" crap="2" count="0"/>
-        <line num="212" type="stmt" count="0"/>
-        <line num="214" type="stmt" count="0"/>
-        <metrics loc="216" ncloc="165" classes="1" methods="20" coveredmethods="8" conditionals="0" coveredconditionals="0" statements="42" coveredstatements="8" elements="62" coveredelements="16"/>
+        <line num="199" type="stmt" count="0"/>
+        <line num="202" type="method" name="getStatus" visibility="public" complexity="2" crap="6" count="0"/>
+        <line num="204" type="stmt" count="0"/>
+        <line num="207" type="method" name="setStatus" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="209" type="stmt" count="0"/>
+        <line num="211" type="stmt" count="0"/>
+        <metrics loc="213" ncloc="165" classes="1" methods="20" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="42" coveredstatements="8" elements="62" coveredelements="15"/>
       </file>
-      <file name="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/src/Entity/Profil.php">
+      <file name="/home/jean/Projet-wari/src/Entity/Profil.php">
         <class name="App\Entity\Profil" namespace="App\Entity">
           <metrics complexity="12" methods="7" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="16" coveredstatements="1" elements="23" coveredelements="2"/>
         </class>
@@ -371,7 +374,7 @@
         <line num="83" type="stmt" count="0"/>
         <metrics loc="85" ncloc="65" classes="1" methods="7" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="16" coveredstatements="1" elements="23" coveredelements="2"/>
       </file>
-      <file name="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/src/Entity/Transaction.php">
+      <file name="/home/jean/Projet-wari/src/Entity/Transaction.php">
         <class name="App\Entity\Transaction" namespace="App\Entity">
           <metrics complexity="61" methods="35" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="52" coveredstatements="0" elements="87" coveredelements="0"/>
         </class>
@@ -464,7 +467,7 @@
         <line num="313" type="stmt" count="0"/>
         <metrics loc="315" ncloc="254" classes="1" methods="35" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="52" coveredstatements="0" elements="87" coveredelements="0"/>
       </file>
-      <file name="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/src/Entity/UserChecker.php">
+      <file name="/home/jean/Projet-wari/src/Entity/UserChecker.php">
         <class name="App\Entity\UserChecker" namespace="App\Entity">
           <metrics complexity="6" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="0" elements="12" coveredelements="0"/>
         </class>
@@ -482,7 +485,7 @@
         <line num="33" type="stmt" count="0"/>
         <metrics loc="34" ncloc="24" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="0" elements="12" coveredelements="0"/>
       </file>
-      <file name="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/src/Entity/Utilisateur.php">
+      <file name="/home/jean/Projet-wari/src/Entity/Utilisateur.php">
         <class name="App\Entity\Utilisateur" namespace="App\Entity">
           <metrics complexity="54" methods="35" coveredmethods="24" conditionals="0" coveredconditionals="0" statements="72" coveredstatements="40" elements="107" coveredelements="64"/>
         </class>
@@ -498,15 +501,15 @@
         <line num="117" type="method" name="setUsername" visibility="public" complexity="1" crap="1" count="11"/>
         <line num="119" type="stmt" count="11"/>
         <line num="121" type="stmt" count="11"/>
-        <line num="127" type="method" name="getRoles" visibility="public" complexity="1" crap="1" count="12"/>
-        <line num="129" type="stmt" count="12"/>
-        <line num="131" type="stmt" count="12"/>
-        <line num="133" type="stmt" count="12"/>
+        <line num="127" type="method" name="getRoles" visibility="public" complexity="1" crap="1" count="13"/>
+        <line num="129" type="stmt" count="13"/>
+        <line num="131" type="stmt" count="13"/>
+        <line num="133" type="stmt" count="13"/>
         <line num="136" type="method" name="setRoles" visibility="public" complexity="1" crap="1" count="5"/>
         <line num="138" type="stmt" count="5"/>
         <line num="140" type="stmt" count="5"/>
-        <line num="146" type="method" name="getPassword" visibility="public" complexity="1" crap="1" count="12"/>
-        <line num="148" type="stmt" count="12"/>
+        <line num="146" type="method" name="getPassword" visibility="public" complexity="1" crap="1" count="13"/>
+        <line num="148" type="stmt" count="13"/>
         <line num="151" type="method" name="setPassword" visibility="public" complexity="1" crap="1" count="11"/>
         <line num="153" type="stmt" count="11"/>
         <line num="155" type="stmt" count="11"/>
@@ -515,10 +518,10 @@
         <line num="163" type="method" name="setConfirmPassword" visibility="public" complexity="1" crap="1" count="11"/>
         <line num="165" type="stmt" count="11"/>
         <line num="167" type="stmt" count="11"/>
-        <line num="173" type="method" name="getSalt" visibility="public" complexity="1" crap="1" count="12"/>
-        <line num="176" type="stmt" count="12"/>
-        <line num="181" type="method" name="eraseCredentials" visibility="public" complexity="1" crap="1" count="12"/>
-        <line num="185" type="stmt" count="12"/>
+        <line num="173" type="method" name="getSalt" visibility="public" complexity="1" crap="1" count="13"/>
+        <line num="176" type="stmt" count="13"/>
+        <line num="181" type="method" name="eraseCredentials" visibility="public" complexity="1" crap="1" count="13"/>
+        <line num="185" type="stmt" count="13"/>
         <line num="187" type="method" name="getEntreprise" visibility="public" complexity="2" crap="2" count="11"/>
         <line num="189" type="stmt" count="11"/>
         <line num="192" type="method" name="setEntreprise" visibility="public" complexity="2" crap="2" count="11"/>
@@ -597,7 +600,7 @@
       </file>
     </package>
     <package name="App\EventSubscriber">
-      <file name="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/src/EventSubscriber/ExceptionSubscriber.php">
+      <file name="/home/jean/Projet-wari/src/EventSubscriber/ExceptionSubscriber.php">
         <class name="App\EventSubscriber\ExceptionSubscriber" namespace="App\EventSubscriber">
           <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="4" coveredelements="0"/>
         </class>
@@ -609,21 +612,21 @@
       </file>
     </package>
     <package name="App\Form">
-      <file name="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/src/Form/DepotType.php">
+      <file name="/home/jean/Projet-wari/src/Form/DepotType.php">
         <class name="App\Form\DepotType" namespace="App\Form">
-          <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="0" elements="8" coveredelements="0"/>
+          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="8" coveredelements="8"/>
         </class>
-        <line num="14" type="method" name="buildForm" visibility="public" complexity="1" crap="2" count="0"/>
-        <line num="17" type="stmt" count="0"/>
-        <line num="18" type="stmt" count="0"/>
-        <line num="20" type="stmt" count="0"/>
-        <line num="22" type="method" name="configureOptions" visibility="public" complexity="1" crap="2" count="0"/>
-        <line num="24" type="stmt" count="0"/>
-        <line num="25" type="stmt" count="0"/>
-        <line num="28" type="stmt" count="0"/>
-        <metrics loc="29" ncloc="29" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="0" elements="8" coveredelements="0"/>
+        <line num="14" type="method" name="buildForm" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="17" type="stmt" count="1"/>
+        <line num="18" type="stmt" count="1"/>
+        <line num="20" type="stmt" count="1"/>
+        <line num="22" type="method" name="configureOptions" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="24" type="stmt" count="1"/>
+        <line num="25" type="stmt" count="1"/>
+        <line num="28" type="stmt" count="1"/>
+        <metrics loc="29" ncloc="29" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="8" coveredelements="8"/>
       </file>
-      <file name="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/src/Form/UtilisateurType.php">
+      <file name="/home/jean/Projet-wari/src/Form/UtilisateurType.php">
         <class name="App\Form\UtilisateurType" namespace="App\Form">
           <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="13" elements="15" coveredelements="15"/>
         </class>
@@ -646,18 +649,18 @@
       </file>
     </package>
     <package name="App">
-      <file name="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/src/Kernel.php">
+      <file name="/home/jean/Projet-wari/src/Kernel.php">
         <class name="App\Kernel" namespace="App">
           <metrics complexity="6" methods="4" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="6" elements="23" coveredelements="8"/>
         </class>
-        <line num="18" type="method" name="registerBundles" visibility="public" complexity="3" crap="3" count="12"/>
-        <line num="20" type="stmt" count="12"/>
-        <line num="21" type="stmt" count="12"/>
-        <line num="22" type="stmt" count="12"/>
-        <line num="23" type="stmt" count="12"/>
-        <line num="26" type="stmt" count="12"/>
-        <line num="28" type="method" name="getProjectDir" visibility="public" complexity="1" crap="1" count="12"/>
-        <line num="30" type="stmt" count="12"/>
+        <line num="18" type="method" name="registerBundles" visibility="public" complexity="3" crap="3" count="13"/>
+        <line num="20" type="stmt" count="13"/>
+        <line num="21" type="stmt" count="13"/>
+        <line num="22" type="stmt" count="13"/>
+        <line num="23" type="stmt" count="13"/>
+        <line num="26" type="stmt" count="13"/>
+        <line num="28" type="method" name="getProjectDir" visibility="public" complexity="1" crap="1" count="13"/>
+        <line num="30" type="stmt" count="13"/>
         <line num="33" type="method" name="configureContainer" visibility="protected" complexity="1" crap="2" count="0"/>
         <line num="35" type="stmt" count="0"/>
         <line num="36" type="stmt" count="0"/>
@@ -677,7 +680,7 @@
       </file>
     </package>
     <package name="DoctrineMigrations">
-      <file name="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/src/Migrations/Version20190726102446.php">
+      <file name="/home/jean/Projet-wari/src/Migrations/Version20190726102446.php">
         <class name="DoctrineMigrations\Version20190726102446" namespace="DoctrineMigrations">
           <metrics complexity="3" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="27" coveredstatements="0" elements="30" coveredelements="0"/>
         </class>
@@ -715,7 +718,7 @@
       </file>
     </package>
     <package name="App\Repository">
-      <file name="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/src/Repository/DepotRepository.php">
+      <file name="/home/jean/Projet-wari/src/Repository/DepotRepository.php">
         <class name="App\Repository\DepotRepository" namespace="App\Repository">
           <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="3" coveredelements="0"/>
         </class>
@@ -724,13 +727,13 @@
         <line num="20" type="stmt" count="0"/>
         <metrics loc="50" ncloc="14" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="3" coveredelements="0"/>
       </file>
-      <file name="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/src/Repository/EntrepriseRepository.php">
+      <file name="/home/jean/Projet-wari/src/Repository/EntrepriseRepository.php">
         <class name="App\Repository\EntrepriseRepository" namespace="App\Repository">
           <metrics complexity="2" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="2" elements="9" coveredelements="3"/>
         </class>
-        <line num="18" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="12"/>
-        <line num="20" type="stmt" count="12"/>
-        <line num="21" type="stmt" count="12"/>
+        <line num="18" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="13"/>
+        <line num="20" type="stmt" count="13"/>
+        <line num="21" type="stmt" count="13"/>
         <line num="51" type="method" name="findAllEntreprises" visibility="public" complexity="1" crap="2" count="0"/>
         <line num="53" type="stmt" count="0"/>
         <line num="54" type="stmt" count="0"/>
@@ -739,7 +742,7 @@
         <line num="57" type="stmt" count="0"/>
         <metrics loc="59" ncloc="23" classes="1" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="2" elements="9" coveredelements="3"/>
       </file>
-      <file name="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/src/Repository/ProfilRepository.php">
+      <file name="/home/jean/Projet-wari/src/Repository/ProfilRepository.php">
         <class name="App\Repository\ProfilRepository" namespace="App\Repository">
           <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
         </class>
@@ -748,7 +751,7 @@
         <line num="20" type="stmt" count="11"/>
         <metrics loc="50" ncloc="14" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
       </file>
-      <file name="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/src/Repository/TransactionRepository.php">
+      <file name="/home/jean/Projet-wari/src/Repository/TransactionRepository.php">
         <class name="App\Repository\TransactionRepository" namespace="App\Repository">
           <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="3" coveredelements="0"/>
         </class>
@@ -757,16 +760,16 @@
         <line num="20" type="stmt" count="0"/>
         <metrics loc="50" ncloc="14" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="3" coveredelements="0"/>
       </file>
-      <file name="/home/abdoulaye/Bureau/Mes Projets Symfony/Projet wari/Wari/src/Repository/UtilisateurRepository.php">
+      <file name="/home/jean/Projet-wari/src/Repository/UtilisateurRepository.php">
         <class name="App\Repository\UtilisateurRepository" namespace="App\Repository">
           <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
         </class>
-        <line num="17" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="12"/>
-        <line num="19" type="stmt" count="12"/>
-        <line num="20" type="stmt" count="12"/>
+        <line num="17" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="13"/>
+        <line num="19" type="stmt" count="13"/>
+        <line num="20" type="stmt" count="13"/>
         <metrics loc="60" ncloc="13" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
       </file>
     </package>
-    <metrics files="20" loc="2012" ncloc="1485" classes="20" methods="137" coveredmethods="42" conditionals="0" coveredconditionals="0" statements="493" coveredstatements="107" elements="630" coveredelements="149"/>
+    <metrics files="20" loc="2014" ncloc="1490" classes="20" methods="137" coveredmethods="49" conditionals="0" coveredconditionals="0" statements="496" coveredstatements="138" elements="633" coveredelements="187"/>
   </project>
 </coverage>

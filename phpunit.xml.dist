@@ -21,7 +21,7 @@
         <!-- on modifie ces 4 balises -->
         <server name="KERNEL_CLASS" value="App\Kernel" />
         <server name="SYMFONY_DEPRECATIONS_HELPER" value="weak" />
-        <server name="DATABASE_URL" value="mysql://root:101419@127.0.0.1:3306/wari" />
+        <server name="DATABASE_URL" value="mysql://root:Jean1490@127.0.0.1:3306/wari" />
         <server name="CORS_ALLOW_ORIGIN" value="*" />
     </php>
 
